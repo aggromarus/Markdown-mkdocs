@@ -13,4 +13,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Sync files to server
-        run: rsync -avz --delete ./ root@94.159.102.126:/Test
+        run: |
+          ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
+          rsync -avz --delete ./ root@94.159.102.126:/Test
