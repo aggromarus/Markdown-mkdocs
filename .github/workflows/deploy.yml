@@ -30,6 +30,7 @@ jobs:
       # 3. Сборка проекта MkDocs
       - name: Build MkDocs site
         run: |
+          cd Test/
           source venv/bin/activate
           mkdocs build
 
