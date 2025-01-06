@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
+
       - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
@@ -19,9 +22,7 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
 
       - name: Add server to known_hosts
-        run: |
-          mkdir -p ~/.ssh
-          ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
 
       - name: Sync files to server
         run: rsync -avz --delete ./ root@94.159.102.126:/Test
