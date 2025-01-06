@@ -1,4 +1,4 @@
-name: Build and Deploy MkDocs
+name: Deploy to Server
 
 on:
   push:
@@ -8,45 +8,21 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      # 1. Клонируем код репозитория
       - name: Checkout code
         uses: actions/checkout@v3
 
-#      # 2. Устанавливаем Python и зависимости
-#      - name: Set up Python
-#        uses: actions/setup-python@v4
-#        with:
-#          python-version: "3.10"
-#
-#      - name: Install dependencies
-#        run: |
-#          python -m venv venv
-#          source venv/bin/activate
-#          pip install -r requirements.txt
-#          pip install mkdocs
+      - name: Install rsync
+        run: sudo apt-get update && sudo apt-get install -y rsync
 
-      # 3. Сборка проекта MkDocs
-      - name: Check current directory
-        run: pwd
-
-      - name: List files in the directory
-        run: ls -al
-
-      - name: Build MkDocs site
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          mkdocs build
-
-      # 4. Копирование файлов на сервер
-      - name: Deploy to Server
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      - name: Setup SSH
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
           chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
-          rsync -avz --delete site/ root@94.159.102.126:/var/www/html/
+
+      - name: Add server to known_hosts
+        run: ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
+
+      - name: Sync files to server
+        run: rsync -avz --delete ./ root@94.159.102.126:/Test
