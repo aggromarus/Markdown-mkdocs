@@ -14,5 +14,6 @@ jobs:
 
       - name: Sync files to server
         run: |
+          mkdir -p ~/.ssh
           ssh-keyscan -H 94.159.102.126 >> ~/.ssh/known_hosts
           rsync -avz --delete ./ root@94.159.102.126:/Test
