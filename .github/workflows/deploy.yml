@@ -28,6 +28,12 @@ jobs:
 #          pip install mkdocs
 
       # 3. Сборка проекта MkDocs
+      - name: Check current directory
+        run: pwd
+
+      - name: List files in the directory
+        run: ls -al
+
       - name: Build MkDocs site
         run: |
           cd Test/
