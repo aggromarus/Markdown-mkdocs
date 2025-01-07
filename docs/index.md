@@ -2,44 +2,44 @@
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-[//]: # (## Commands)
+## Commands
 
-[//]: # ()
-[//]: # ()
-[//]: # (* `mkdocs new [dir-name]` - Create a new project.)
 
-[//]: # ()
-[//]: # (* `mkdocs serve` - Start the live-reloading docs server.)
 
-[//]: # ()
-[//]: # (* `mkdocs build` - Build the documentation site.)
+* `mkdocs new [dir-name]` - Create a new project.
 
-[//]: # ()
-[//]: # (* `mkdocs -h` - Print help message and exit.)
 
-[//]: # ()
-[//]: # (## Project layout)
+* `mkdocs serve` - Start the live-reloading docs server.
 
-[//]: # ()
-[//]: # (    mkdocs.yml    # The configuration file.)
 
-[//]: # (    docs/)
+* `mkdocs build` - Build the documentation site.
 
-[//]: # (        index.md  # The documentation homepage.)
 
-[//]: # (        ...       # Other markdown pages, images and other files.)
+* `mkdocs -h` - Print help message and exit.
 
-[//]: # ()
-[//]: # (## Test)
 
-[//]: # ()
-[//]: # (    some text bla bla bla)
+## Project layout
 
-[//]: # ()
-[//]: # (## Test2)
 
-[//]: # ()
-[//]: # (    аспрмоилтдь)
+    mkdocs.yml    # The configuration file.
 
-[//]: # ()
-[//]: # (## Test 3)
+    docs/
+
+        index.md  # The documentation homepage.
+
+        ...       # Other markdown pages, images and other files.
+
+
+## Test
+
+
+    some text bla bla bla
+
+
+## Test2
+
+
+    аспрмоилтдь
+
+
+## Test 3
