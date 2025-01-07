@@ -33,6 +33,7 @@ jobs:
           source venv/bin/activate
           mkdocs build
           deactivate
+          cp -r site/* /var/www/html/
 
       - name: Set up SSH for deployment
         run: |
@@ -49,6 +50,6 @@ jobs:
           key: ${{ secrets.KEY }}
           port: 22
           debug: true
-          script: |
-            rm -rf /var/www/html/*
-            cp -r site/* /var/www/html/
+#          script: |
+#            rm -rf /var/www/html/*
+#            cp -r site/* /var/www/html/

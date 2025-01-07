@@ -1,5 +1,5 @@
 site_name: My Docs
-site_dir: /var/www/html/
+
 nav:
   - Home: index.md
   - About: about.md
