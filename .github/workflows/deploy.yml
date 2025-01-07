@@ -24,8 +24,14 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
+      - name: Check current directory
+        run: |
+          pwd
+          ls -la
+
       - name: Pull latest changes
         run: |
+          git gc --prune=now
           git pull origin main  # Обновление локальных файлов с удалённого репозитория
 
       - name: Build MkDocs site
@@ -51,5 +57,4 @@ jobs:
           port: 22
           debug: true
           script: |
-            rm -rf /var/www/html/*
             cp -r site/* /var/www/html/
