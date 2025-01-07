@@ -57,4 +57,5 @@ jobs:
           port: 22
           debug: true
           script: |
+            rm -rf /var/www/html/*
             cp -r site/* /var/www/html/
