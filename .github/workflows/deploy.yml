@@ -58,4 +58,4 @@ jobs:
           debug: true
           script: |
             rm -rf /var/www/html/*
-            cp -r /home/runner/work/Test/Test/site /var/www/html/
+            cp -r site/* /var/www/html/
