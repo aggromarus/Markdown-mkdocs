@@ -1,5 +1,10 @@
-site_name: My Docs
-
+site_name: Docs
+theme:
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
 nav:
   - Home: index.md
   - About: about.md
