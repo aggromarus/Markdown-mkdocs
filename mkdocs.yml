@@ -1,11 +1,19 @@
 site_name: Docs
 theme:
-  name: readthedocs
+  name: mkdocs
   highlightjs: true
   hljs_languages:
     - yaml
     - rust
+plugins:
+  - search
+  - macros:
+      module_name: macros
+  - plantuml:
+      puml_url: https://www.plantuml.com/plantuml/
+      num_workers: 8
 nav:
   - Home: index.md
   - About: about.md
-  - TestPage: testpage.md
+  - MappingPage: mapping_table.md
+  - DiagramsPage: testpage.md

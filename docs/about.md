@@ -1,3 +1,6 @@
-# About page 
+# About page
 
-asdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadadasdasdadad
+| Поле           | Тип данных | Описание поля                          |
+|----------------|------------|----------------------------------------|
+| Номер договора | integer    | Содержит номер договора. Буквы и цифры |
+| Дата           | string     | Дата                                   |

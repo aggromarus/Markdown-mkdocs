@@ -1,0 +1,2672 @@
+fields:
+  TariffContractDto:
+    required:
+      - tariffId
+    type: object
+    properties:
+      tariffId:
+        minimum: 1
+        type: integer
+        description: Идентификатор тарифной программы
+        format: int64
+        example: 1
+      dateStart:
+        type: string
+        description: Дата начала
+        format: date-time
+      dateEnd:
+        type: string
+        description: Дата окончания
+        format: date-time
+      dateDeactive:
+        type: string
+        description: Дата отключения
+        format: date-time
+  TariffContractDetailsDto:
+    required:
+      - id
+      - tariffId
+    type: object
+    properties:
+      tariffId:
+        minimum: 1
+        type: integer
+        description: Идентификатор тарифной программы
+        format: int64
+        example: 1
+      dateStart:
+        type: string
+        description: Дата начала
+        format: date-time
+      dateEnd:
+        type: string
+        description: Дата окончания
+        format: date-time
+      dateDeactive:
+        type: string
+        description: Дата отключения
+        format: date-time
+      id:
+        type: integer
+        description: Идентификатор записи связи тарифной программы и договора
+        format: int64
+        example: 1
+  LocalTime:
+    type: object
+    properties:
+      hour:
+        type: integer
+        format: int32
+      minute:
+        type: integer
+        format: int32
+      second:
+        type: integer
+        format: int32
+      nano:
+        type: integer
+        format: int32
+    description: Время по
+    example: '18:00:00'
+  SRGoodsRestrictorCreateDto:
+    required:
+      - duration
+      - durationType
+      - productTypeCode
+      - restrictorDayType
+      - restrictorMeasure
+      - sumMax
+    type: object
+    properties:
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      restrictorMeasure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Установка лимита в.
+        example: Currency/Units
+      currencyId:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Валюта. Заполняется, если restrictorMeasure = Валюта, иначе пусто
+        example: RUB
+      measure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Единицы. Условие заполнения, = Литр/ШТ, если restrictorMeasure = Единицы, иначе пусто
+        example: Litre Each
+      sumMax:
+        minimum: 1
+        type: number
+        description: Сумма Max
+        example: 1000
+      durationType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип длительности
+        example: Month
+      duration:
+        minimum: 1
+        type: integer
+        description: Длительность
+        format: int32
+        example: 5
+      operationMaxCount:
+        type: integer
+        description: Количество операций Max
+        format: int32
+        example: 10
+      restrictorDayType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Рабочие/Выходные дни
+        example: Working days
+      weekDay:
+        $ref: '#/components/schemas/WeekDay'
+      timeSince:
+        $ref: '#/components/schemas/LocalTime'
+      timeTo:
+        $ref: '#/components/schemas/LocalTime'
+    description: Данные для создания ограничителя
+  WeekDay:
+    type: object
+    properties:
+      monday:
+        type: boolean
+      tuesday:
+        type: boolean
+      wednesday:
+        type: boolean
+      thursday:
+        type: boolean
+      friday:
+        type: boolean
+      saturday:
+        type: boolean
+      sunday:
+        type: boolean
+    description: Дни недели
+  ServiceRequestFullFuelDto:
+    type: object
+    properties:
+      fuelCardNumber:
+        type: string
+        description: Номер карты
+        example: '1111121212121212'
+      w4FuelCardStatus:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Статус топливной карты получаемой из w4
+      w4CardIssueDate:
+        type: string
+        description: Дата выпуска карты получаемой из w4
+        format: date
+      id:
+        type: integer
+        format: int64
+      fuelCardId:
+        type: integer
+        format: int64
+    description: Топливные карты
+  ProductRestrictorUpdateDto:
+    required:
+      - productTypeCode
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+      w4Status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус передачи в W4
+        example: Ошибка
+      w4Error:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Ошибка передачи в W4
+        example: Ошибка синхронизации
+    description: Данные для редактирования лимита
+  ProductRestrictorDto:
+    required:
+      - productTypeCode
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+      w4Status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус передачи в W4
+        example: Ошибка
+      w4Error:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Ошибка передачи в W4
+        example: Ошибка синхронизации
+      id:
+        type: integer
+        description: Идентификатор продуктового ограничителя
+        format: int64
+        example: 1
+  GoodsRestrictorUpdateDto:
+    required:
+      - duration
+      - durationType
+      - productTypeCode
+      - restrictorDayType
+      - restrictorMeasure
+      - status
+      - sumMax
+    type: object
+    properties:
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      restrictorMeasure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Установка лимита в.
+        example: Currency/Units
+      measure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Единицы. Условие заполнения, = Литр/ШТ, если restrictorMeasure = Единицы, иначе пусто
+        example: Litre Each
+      currencyId:
+        type: string
+        description: Валюта. Заполняется, если restrictorMeasure = Валюта, иначе пусто
+        example: RUB
+      sumMax:
+        minimum: 1
+        type: number
+        description: Сумма Max
+        example: 1000
+      usedValue:
+        minimum: 0
+        type: number
+        description: Израсходованная сумма
+        example: 750
+      durationType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип длительности
+        example: Month
+      duration:
+        minimum: 1
+        type: integer
+        description: Длительность
+        format: int32
+        example: 5
+      operationMaxCount:
+        type: integer
+        description: Количество операций Max
+        format: int32
+        example: 10
+      operationUsedCount:
+        minimum: 0
+        type: integer
+        description: Количество проведенных операций
+        format: int32
+        example: 7
+      restrictorDayType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Рабочие/Выходные дни
+        example: Working days
+      weekDay:
+        $ref: '#/components/schemas/WeekDay'
+      timeSince:
+        $ref: '#/components/schemas/LocalTime'
+      timeTo:
+        $ref: '#/components/schemas/LocalTime'
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+    description: Данные для создания лимита
+  GoodsRestrictorDto:
+    required:
+      - duration
+      - durationType
+      - productTypeCode
+      - restrictorDayType
+      - restrictorMeasure
+      - status
+      - sumMax
+    type: object
+    properties:
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      restrictorMeasure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Установка лимита в.
+        example: Currency/Units
+      measure:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Единицы. Условие заполнения, = Литр/ШТ, если restrictorMeasure = Единицы, иначе пусто
+        example: Litre Each
+      currencyId:
+        type: string
+        description: Валюта. Заполняется, если restrictorMeasure = Валюта, иначе пусто
+        example: RUB
+      sumMax:
+        minimum: 1
+        type: number
+        description: Сумма Max
+        example: 1000
+      usedValue:
+        minimum: 0
+        type: number
+        description: Израсходованная сумма
+        example: 750
+      durationType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип длительности
+        example: Month
+      duration:
+        minimum: 1
+        type: integer
+        description: Длительность
+        format: int32
+        example: 5
+      operationMaxCount:
+        type: integer
+        description: Количество операций Max
+        format: int32
+        example: 10
+      operationUsedCount:
+        minimum: 0
+        type: integer
+        description: Количество проведенных операций
+        format: int32
+        example: 7
+      restrictorDayType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Рабочие/Выходные дни
+        example: Working days
+      weekDay:
+        $ref: '#/components/schemas/WeekDay'
+      timeSince:
+        $ref: '#/components/schemas/LocalTime'
+      timeTo:
+        $ref: '#/components/schemas/LocalTime'
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+      id:
+        type: integer
+        description: Идентификатор товарного ограничителя
+        format: int64
+        example: 1
+  GeoRestrictorUpdateDto:
+    required:
+      - countryId
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      countryId:
+        type: string
+        description: Страна
+        example: RUS
+      regionId:
+        minimum: 1
+        type: integer
+        description: Идентификатор региона
+        format: int64
+        example: 1
+      gasStationId:
+        minimum: 1
+        type: integer
+        description: Идентификатор АЗС
+        format: int64
+        example: 1
+      partnerId:
+        minimum: 1
+        type: integer
+        description: Идентификатор партнера АЗС
+        format: int64
+        example: 1
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+      w4Status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус передачи в W4
+        example: Ошибка
+      w4Error:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Ошибка передачи в W4
+        example: Ошибка синхронизации
+    description: Данные для редактирования лимита
+  GeoRestrictorDto:
+    required:
+      - countryId
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      countryId:
+        type: string
+        description: Страна
+        example: RUS
+      regionId:
+        minimum: 1
+        type: integer
+        description: Идентификатор региона
+        format: int64
+        example: 1
+      gasStationId:
+        minimum: 1
+        type: integer
+        description: Идентификатор АЗС
+        format: int64
+        example: 1
+      partnerId:
+        minimum: 1
+        type: integer
+        description: Идентификатор партнера АЗС
+        format: int64
+        example: 1
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+      w4Status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус передачи в W4
+        example: Ошибка
+      w4Error:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Ошибка передачи в W4
+        example: Ошибка синхронизации
+      id:
+        type: integer
+        description: Идентификатор географического ограничителя
+        format: int64
+        example: 1
+  TeamMemberUpdateDto:
+    required:
+      - primaryAsku
+      - primaryMember
+      - roleTeamMember
+    type: object
+    properties:
+      roleTeamMember:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Роль
+        example: Support Account Manager
+      primarySince:
+        type: string
+        description: Дата установления статуса основной
+        format: date
+      primaryMember:
+        type: boolean
+        description: Признак основной
+      primaryAsku:
+        type: boolean
+        description: Признак основной АСКУ
+  TeamMemberInfoDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор участника команды договора
+        format: int64
+        example: 1
+      positionId:
+        type: integer
+        description: Идентификатор позиции
+        format: int64
+        example: 1
+      roleTeamMember:
+        type: string
+        description: Роль
+        example: Менеджер по сопровождению
+      primaryMember:
+        type: boolean
+        description: Основной
+      primaryAsku:
+        type: boolean
+        description: Основной АСКУ
+      primarySince:
+        type: string
+        description: Основной
+        format: date
+      followDivisionId:
+        type: integer
+        description: Идентификатор офиса продаж
+        format: int64
+        example: 1
+      followOrganizationId:
+        type: integer
+        description: Идентификатор отделения ГПН
+        format: int64
+        example: 1
+      firstName:
+        type: string
+        description: Имя
+        example: Петр
+      lastName:
+        type: string
+        description: Фамилия
+        example: Петров
+      middleName:
+        type: string
+        description: Отчество
+        example: Петрович
+      mobilePhone:
+        type: string
+        description: Мобильный телефон
+        example: '79876543210'
+      workPhone:
+        type: string
+        description: Рабочий телефон
+        example: '74953332211'
+      email:
+        type: string
+        description: Email
+        example: company@email.ru
+  SignatoriesDto:
+    type: object
+    properties:
+      personBuyerId:
+        minimum: 1
+        type: integer
+        description: Идентификатор покупателя
+        format: int64
+        example: 1
+      personVendorId:
+        minimum: 1
+        type: integer
+        description: Идентификатор поставщика
+        format: int64
+        example: 1
+  OrgMemberUpdateDto:
+    required:
+      - clientId
+      - roleParticipant
+    type: object
+    properties:
+      roleParticipant:
+        type: string
+        description: Роль
+        example: Customer_
+      clientId:
+        minimum: 1
+        type: integer
+        description: Идентификатор КА
+        format: int64
+        example: 1
+  OrgMemberInfoDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор участника договора
+        format: int64
+        example: 1
+      roleParticipant:
+        type: string
+        description: Роль
+        example: Менеджер по сопровождению
+      shortName:
+        type: string
+        description: Краткое наименование КА
+        example: Ромашка
+      clientId:
+        type: integer
+        description: Идентификатор КА
+        format: int64
+        example: 1
+      opf:
+        type: string
+        description: Справочник ОПФ
+        example: ООО
+      inn:
+        type: string
+        description: ИНН
+        example: '1234567890'
+      kpp:
+        type: string
+        description: КПП
+        example: '123456789'
+      ogrn:
+        type: string
+        description: ОГРН/ОГРНИП
+        example: '1234567890123'
+      status:
+        type: string
+        description: Статус
+        example: Ввод данных
+  PersonDto:
+    type: object
+    properties:
+      firstName:
+        type: string
+        description: Имя
+        example: Петр
+      lastName:
+        type: string
+        description: Фамилия
+        example: Петров
+      middleName:
+        type: string
+        description: Отчество
+        example: Петрович
+      email:
+        type: string
+        description: Email
+        example: example@mail.ru
+      phone:
+        type: string
+        description: Телефон
+        example: '74043055643'
+    description: Данные пользователя
+  ContractDto:
+    required:
+      - closureDate
+      - conclusionDate
+      - contractName
+      - contractType
+      - effectiveDate
+      - endDate
+      - invoicingScheme
+      - labeledProductList
+      - paymentTerms
+      - saleStage
+      - segment
+    type: object
+    properties:
+      contractType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип договора
+        example: Commercial
+      contractName:
+        docName: contractName
+        apiName: contractName
+        dbName: contract_name
+        description: "Номер договора. Такая то длина, содержит буквы и цифры"
+      saleStage:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Этап продаж
+        example: Active
+      conclusionDate:
+        type: string
+        description: Дата заключения договора
+        format: date
+      effectiveDate:
+        type: string
+        description: Дата вступления в силу договора
+        format: date
+      closureDate:
+        type: string
+        description: Дата закрытия
+        format: date
+      endDate:
+        type: string
+        description: Дата окончания договора
+        format: date
+      edoId:
+        minimum: 1
+        type: integer
+        description: Идентификатор ЭДО
+        format: int64
+        example: 123
+      edoProvider:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: ЭДО провайдер
+        example: УльтраКулПровайдер
+      segment:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Сегмент договора
+        example: B2G
+      additionalServiceContract:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Договор на доп. услугу
+        example: Зарплатный проект
+      discountScheme:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Схема расчета скидки
+        example: TRF_APPLY_Y
+      paymentTerms:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Условие оплаты
+        example: Prepayment
+      invoicingScheme:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Схема оплаты
+        example: Без выставления счетов
+      contractPricing:
+        maxLength: 10
+        minLength: 0
+        type: string
+        description: Цена в
+        example: RUB
+      contractPaying:
+        maxLength: 10
+        minLength: 0
+        type: string
+        description: Оплата в
+        example: RUB
+      autoRenewal:
+        type: boolean
+        description: Автоматическая пролонгация договора
+        example: true
+      notes:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: примечание
+        example: какой-либо текст
+      commissionType:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Тип комиссии за ТК
+        example: COMMISSION_ON_RECEIVE
+      expectedTurnoverPmonth:
+        minimum: 0
+        type: number
+        description: Предполагаемый оборот в месяц
+        example: 123456
+      lossReason:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Причина проигрыша
+        example: Insufficient Conditions
+      labeledProductList:
+        maxLength: 20
+        minLength: 0
+        type: string
+        description: Маркированная продукция
+        example: Allow
+      statusApproval:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Статус согласования договора
+        example: Active
+      notePrintForm:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Примечание для печатных форм участников договора
+        example: Некое примечение
+      includeHolding:
+        type: boolean
+        description: Входит в холдинг
+        example: true
+      paymentBillDateScheme:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Выставление счетов на оплату
+        example: Turned Off
+      consentNewsletter:
+        type: boolean
+        description: Согласие на информационную рассылку
+        example: false
+      nonTypicalContract:
+        type: boolean
+        description: Нетиповой договор
+        example: false
+      refuelByLk:
+        type: boolean
+        description: Онлайн заправка из ЛК
+        example: false
+      payByPhoneNumber:
+        type: boolean
+        description: Оплата по номеру телефона
+        example: false
+      waitingAgreement:
+        type: boolean
+        description: Ожидание согласования
+        example: true
+      declineOfferContract:
+        type: boolean
+        description: Отказ от договора-оферты
+        example: true
+      consentAd:
+        type: boolean
+        description: Согласие на рекламную рассылку
+        example: true
+      blockUnblockReason:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Причина блокировки/разблокировки договора
+        example: Закрытие/Расторжение договора
+      closureReason:
+        maxLength: 120
+        minLength: 0
+        type: string
+        description: Причина расторжения/закрытия договора
+        example: Некачественное топливо
+      infoThresholdL:
+        minimum: 0
+        type: number
+        description: Информационный порог (литры)
+        format: float
+        example: 123
+      infoThresholdRub:
+        minimum: 0
+        type: number
+        description: Информационный порог (рубли)
+        example: 456
+      balanceNotice:
+        minimum: 0
+        type: number
+        description: Информирование менеджера, баланс
+        example: 456789
+      daysForPay:
+        minimum: 0
+        type: integer
+        description: Количество дней на оплату
+        format: int32
+        example: 10
+      billingDays:
+        maxLength: 150
+        minLength: 0
+        type: string
+        description: Дни выставления счетов
+        example: пн
+      w4Id:
+        type: integer
+        description: Идентификатор в Way4
+        format: int64
+        example: 123
+    description: Данные для редактирования договора
+  ContractDetailInfoDto:
+    required:
+      - closureDate
+      - conclusionDate
+      - contractName
+      - contractType
+      - effectiveDate
+      - endDate
+      - invoicingScheme
+      - labeledProductList
+      - paymentTerms
+      - saleStage
+      - segment
+    type: object
+    properties:
+      contractType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип договора
+        example: Commercial
+      contractName:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Наименование договора от даты заключения
+        example: №ЯР014069670 от 02.02.2024
+      saleStage:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Этап продаж
+        example: Active
+      conclusionDate:
+        type: string
+        description: Дата заключения договора
+        format: date
+      effectiveDate:
+        type: string
+        description: Дата вступления в силу договора
+        format: date
+      closureDate:
+        type: string
+        description: Дата закрытия
+        format: date
+      endDate:
+        type: string
+        description: Дата окончания договора
+        format: date
+      edoId:
+        minimum: 1
+        type: integer
+        description: Идентификатор ЭДО
+        format: int64
+        example: 123
+      edoProvider:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: ЭДО провайдер
+        example: УльтраКулПровайдер
+      segment:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Сегмент договора
+        example: B2G
+      additionalServiceContract:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Договор на доп. услугу
+        example: Зарплатный проект
+      discountScheme:
+        type: string
+        description: Схема расчета скидки
+      paymentTerms:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Условие оплаты
+        example: Prepayment
+      invoicingScheme:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Схема оплаты
+        example: Без выставления счетов
+      contractPricing:
+        maxLength: 10
+        minLength: 0
+        type: string
+        description: Цена в
+        example: RUB
+      contractPaying:
+        maxLength: 10
+        minLength: 0
+        type: string
+        description: Оплата в
+        example: RUB
+      autoRenewal:
+        type: boolean
+        description: Автоматическая пролонгация договора
+        example: true
+      notes:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: примечание
+        example: какой-либо текст
+      commissionType:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Тип комиссии за ТК
+        example: COMMISSION_ON_RECEIVE
+      expectedTurnoverPmonth:
+        minimum: 0
+        type: number
+        description: Предполагаемый оборот в месяц
+        example: 123456
+      lossReason:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Причина проигрыша
+        example: Insufficient Conditions
+      labeledProductList:
+        maxLength: 20
+        minLength: 0
+        type: string
+        description: Маркированная продукция
+        example: Allow
+      statusApproval:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Статус согласования договора
+        example: Active
+      notePrintForm:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Примечание для печатных форм участников договора
+        example: Некое примечение
+      includeHolding:
+        type: boolean
+        description: Входит в холдинг
+        example: true
+      paymentBillDateScheme:
+        maxLength: 25
+        minLength: 0
+        type: string
+        description: Выставление счетов на оплату
+        example: Turned Off
+      consentNewsletter:
+        type: boolean
+        description: Согласие на информационную рассылку
+        example: false
+      nonTypicalContract:
+        type: boolean
+        description: Нетиповой договор
+        example: false
+      refuelByLk:
+        type: boolean
+        description: Онлайн заправка из ЛК
+        example: false
+      payByPhoneNumber:
+        type: boolean
+        description: Оплата по номеру телефона
+        example: false
+      waitingAgreement:
+        type: boolean
+        description: Ожидание согласования
+        example: true
+      declineOfferContract:
+        type: boolean
+        description: Отказ от договора-оферты
+        example: true
+      consentAd:
+        type: boolean
+        description: Согласие на рекламную рассылку
+        example: true
+      blockUnblockReason:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Причина блокировки/разблокировки договора
+        example: Закрытие/Расторжение договора
+      closureReason:
+        maxLength: 120
+        minLength: 0
+        type: string
+        description: Причина расторжения/закрытия договора
+        example: Некачественное топливо
+      infoThresholdL:
+        type: number
+        description: Информационный порог (литры)
+        format: float
+        example: 123
+      infoThresholdRub:
+        type: number
+        description: Информационный порог (рубли)
+        example: 123
+      balanceNotice:
+        minimum: 0
+        type: number
+        description: Информирование менеджера, баланс
+        example: 456789
+      daysForPay:
+        minimum: 0
+        type: integer
+        description: Количество дней на оплату
+        format: int32
+        example: 10
+      billingDays:
+        maxLength: 150
+        minLength: 0
+        type: string
+        description: Дни выставления счетов
+        example: пн
+      w4Id:
+        type: integer
+        description: Идентификатор в Way4
+        format: int64
+        example: 123
+      id:
+        type: integer
+        description: ID Договора
+        format: int64
+        example: 1
+      clientId:
+        type: integer
+        description: ID Покупателя
+        format: int64
+        example: 1
+      shortName:
+        type: string
+        description: Короткое имя КА
+        example: Ромашка
+      inn:
+        type: string
+        description: ИНН КА
+        example: '520205004556'
+      contractNumber:
+        type: string
+        description: Номер договора
+        example: №ЯР014069670
+      uniquePayId:
+        type: string
+        description: Уникальный идентификатор платежа
+        example: '123'
+      segmentUpdDate:
+        type: string
+        description: Дата обновления сегмента
+        format: date
+      personBuyerId:
+        type: integer
+        description: ID КЛ покупателя
+        format: int64
+        example: 123456
+      personVendorId:
+        type: integer
+        description: ID КЛ поставщика
+        format: int64
+        example: 123456
+      promoName:
+        type: string
+        description: Наименование промоакции
+        example: акция
+      invitedByReferer:
+        type: string
+        description: Краткое наименование реферера, который привлек КА
+        example: Рога и копыта inc.
+      referrersContract:
+        type: string
+        description: Номер договора реферера, в рамках которого привлечен КА
+        example: ПР1234123 от 02.02.1990
+      orgConsignee:
+        type: integer
+        description: ID грузополучателя
+        format: int64
+        example: 132
+      finAccount:
+        $ref: '#/components/schemas/FinAccountDto'
+      contractTeamMembers:
+        type: array
+        items:
+          type: object
+      fuelCards:
+        type: array
+        items:
+          type: object
+      orgMembers:
+        type: array
+        items:
+          $ref: '#/components/schemas/OrgMemberDto'
+      primaryFollowDivision:
+        type: string
+        description: Названия основного офиса продаж, где сопровождает договор
+      primaryFollowOrganization:
+        type: string
+        description: Название основного отделения, где сопровождается договор
+      followOrganizations:
+        type: array
+        description: Сопровождается в отделении. Организации, где сопровождается договор
+        items:
+          $ref: '#/components/schemas/FollowOrganizationDto'
+      followDivisions:
+        type: array
+        description: Сопровождается в офисе продаж. Подразделения, где сопровождается договор
+        items:
+          $ref: '#/components/schemas/FollowDivisionDto'
+      created:
+        type: string
+        description: Дата создания договора
+        format: date-time
+      lastUpd:
+        type: string
+        description: Дата последнего обновления договора
+        format: date-time
+  FinAccountDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор записи финансовой информации
+        format: int64
+        example: 1
+      contractId:
+        type: integer
+        description: Идентификатор договора
+        format: int64
+        example: 1
+      w4StatusContract:
+        type: string
+        description: Статус договора
+        example: Ввод данных
+      accountNumber:
+        type: string
+        description: Номер лицевого счета
+        example: '1246'
+      accountStatus:
+        type: string
+        description: Статус лицевого счета
+        example: Статус
+      balance:
+        type: number
+        description: Собственные средства с учетом заблокированной суммы
+        example: 1246
+      currentBalance:
+        type: number
+        description: Собственные средства
+        example: 1246
+      minBalance:
+        type: number
+        description: Значение неснижаемого остатка
+        example: 1246
+      availableBalance:
+        type: number
+        description: Доступный остаток
+        example: 1246
+      totalBalance:
+        type: number
+        description: Общий баланс контракта, включая балансы дочерних контрактов
+        example: 24612461
+      currentVolume:
+        type: number
+        description: Объем потребления в текущем месяце (в литрах)
+        format: float
+        example: 1246
+      previousVolume:
+        type: number
+        description: Объем потребления в предыдущем месяце (в литрах)
+        format: float
+        example: 1246
+      chargesCurrentMonth:
+        type: number
+        description: Расход в текущем месяце
+        example: 1246
+      releaseCardNum:
+        type: integer
+        description: Число карт контракта
+        format: int32
+        example: 1246
+      activeCardNum:
+        type: integer
+        description: Число активных карт контракта
+        format: int32
+        example: 1246
+      lastPayment:
+        type: number
+        description: Сумма последнего платежа
+        example: 2461
+      lastPaymentDate:
+        type: string
+        description: Дата последнего платежа
+        format: date
+        example: '0016-09-14'
+      blocked:
+        type: number
+        description: Сумма собственных заблокированных средств
+        example: 1246
+      totalBlocked:
+        type: number
+        description: Общая сумма заблокированных средств, включая заблокированные средства дочерних контрактов
+        example: 1246
+  OrgMemberDto:
+    required:
+      - clientId
+    type: object
+    properties:
+      clientId:
+        type: integer
+        description: Идентификатор КА
+        format: int64
+        example: 1
+      roleParticipant:
+        type: string
+        description: Роль
+        example: Менеджер по сопровождению
+  ContractInfoDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор контракта
+        format: int64
+      clientId:
+        type: integer
+        description: ID Покупателя
+        format: int32
+        example: 1
+      contractType:
+        type: string
+        description: Тип договора
+        example: Коммерческий
+      contractNumber:
+        type: string
+        description: Номер договора. Формируется системой
+        example: №ЯР014069670
+      contractName:
+        type: string
+        description: Наименование договора от даты заключения
+        example: №ЯР014069670 от 02.02.2024
+      saleStage:
+        type: string
+        description: Этап продаж
+        example: Активен
+      conclusionDate:
+        type: string
+        description: Дата заключения договора
+        format: date
+      effectiveDate:
+        type: string
+        description: Дата вступления в силу договора
+        format: date
+      closureDate:
+        type: string
+        description: Дата закрытия
+        format: date
+      endDate:
+        type: string
+        description: Дата окончания договора
+        format: date
+      orgMembers:
+        type: array
+        description: Организационные члены
+        items:
+          $ref: '#/components/schemas/OrgMemberDto'
+  ServiceRequestCreateDto:
+    required:
+      - bindingType
+      - channel
+      - createdBy
+      - date
+      - openDate
+      - personBuyerId
+      - personVendorId
+      - receiveType
+      - responsibleManagerId
+      - theme
+      - type
+    type: object
+    properties:
+      channel:
+        maxLength: 50
+        minLength: 0
+        type: string
+        description: Канал, по которому поступило обращение
+        example: Other
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип обращения
+        example: Requests
+      theme:
+        maxLength: 90
+        minLength: 0
+        type: string
+        description: Тема обращения
+        example: Application for Fuel Card
+      bindingType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип привязки
+        example: ByRange
+      cardCount:
+        minimum: 0
+        type: integer
+        description: Число карт
+        format: int64
+        example: 3
+      bottomBorder:
+        pattern: ^$|^[0-9]{16}$
+        type: string
+        description: Нижняя граница диапазона
+        example: '7005839990012545'
+      topBorder:
+        pattern: ^$|^[0-9]{16}$
+        type: string
+        description: Верхняя граница диапазона
+        example: '7005839990012560'
+      receiveType:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип получения карт
+        example: Pickup
+      deliveryOfficeId:
+        type: integer
+        description: ID оффиса для самовывоза
+        format: int64
+      srCardIssueDate:
+        type: string
+        description: Дата выдачи карт
+        format: date
+      date:
+        type: string
+        description: Дата обращения клиента
+        format: date
+      openDate:
+        type: string
+        description: Начало работы
+        format: date-time
+      endDate:
+        type: string
+        description: Окончание работы
+        format: date-time
+      responsibleManagerId:
+        minimum: 1
+        type: integer
+        description: ID Ответственного по обращению
+        format: int64
+        example: 1
+      personBuyerId:
+        minimum: 1
+        type: integer
+        description: ID КЛ покупателя по обращению
+        format: int64
+        example: 1
+      personVendorId:
+        minimum: 1
+        type: integer
+        description: ID КЛ продавца\поставщика по обращению
+        format: int64
+        example: 1
+      comment:
+        maxLength: 255
+        minLength: 0
+        type: string
+        description: Комментарий
+        example: Комментарий
+      createdBy:
+        minimum: 1
+        type: integer
+        description: ID пользователя, создавшего обращение
+        format: int64
+        example: 1
+      fuelCards:
+        type: array
+        description: Список топливных карт обращения
+        items:
+          $ref: '#/components/schemas/ServiceRequestFuelCreateDto'
+  ServiceRequestFuelCreateDto:
+    type: object
+    properties:
+      fuelCardNumber:
+        type: string
+        description: Номер карты
+        example: '1111121212121212'
+    description: Список топливных карт обращения
+  ProductRestrictorCreateDto:
+    required:
+      - productTypeCode
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      productTypeCode:
+        maxLength: 75
+        minLength: 0
+        type: string
+        description: Код типа товара
+        example: CS_SERVICES
+      productGroupCode:
+        maxLength: 100
+        minLength: 0
+        type: string
+        description: Код группы товара
+        example: FERRY_TICKETS
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+    description: Данные для создания лимита
+  GeoRestrictorCreateDto:
+    required:
+      - countryId
+      - status
+      - type
+    type: object
+    properties:
+      type:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Тип ограничения
+        example: Allowed
+      status:
+        maxLength: 30
+        minLength: 0
+        type: string
+        description: Статус
+        example: Input
+      countryId:
+        type: string
+        description: Страна
+        example: RUS
+      regionId:
+        minimum: 1
+        type: integer
+        description: Идентификатор региона
+        format: int64
+        example: 1
+      gasStationId:
+        minimum: 1
+        type: integer
+        description: Идентификатор АЗС
+        format: int64
+        example: 1
+      partnerId:
+        minimum: 1
+        type: integer
+        description: Идентификатор партнера АЗС
+        format: int64
+        example: 1
+      lastUpdRestrictor:
+        type: string
+        description: Дата последнего изменения лимита
+        format: date
+        example: '2023-05-20'
+      lastUpdRestrictorBy:
+        minimum: 1
+        type: integer
+        description: Источник изменения
+        format: int64
+        example: 1
+    description: Данные для создания лимита
+  ContractCreateDto:
+    required:
+      - clientId
+      - followDivisions
+      - followOrganizations
+      - positionId
+    type: object
+    properties:
+      positionId:
+        minimum: 1
+        type: integer
+        description: ID штатки текущего пользователя
+        format: int64
+      clientId:
+        minimum: 1
+        type: integer
+        description: ID клиента
+        format: int64
+        example: 1
+      followOrganizations:
+        type: array
+        description: Сопровождается в отделении. Организации, где сопровождается договор
+        items:
+          $ref: '#/components/schemas/FollowOrganizationDto'
+      followDivisions:
+        type: array
+        description: Сопровождается в офисе продаж. Подразделения, где сопровождается договор
+        items:
+          $ref: '#/components/schemas/FollowDivisionDto'
+    description: Данные для создания договора
+  PageTransferFundsDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/TransferFundsDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageableObject:
+    type: object
+    properties:
+      offset:
+        type: integer
+        format: int64
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      unpaged:
+        type: boolean
+      paged:
+        type: boolean
+      pageNumber:
+        type: integer
+        format: int32
+      pageSize:
+        type: integer
+        format: int32
+  SortObject:
+    type: object
+    properties:
+      direction:
+        type: string
+      nullHandling:
+        type: string
+      ascending:
+        type: boolean
+      property:
+        type: string
+      ignoreCase:
+        type: boolean
+  TransferFundsDto:
+    type: object
+    properties:
+      user:
+        type: string
+        description: Пользователь
+      transferType:
+        type: string
+        description: Тип перевода
+      transferAmount:
+        type: integer
+        description: Сумма перевода
+        format: int32
+      created:
+        type: string
+        description: Дата перевода
+        format: date-time
+  TransactionDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      direct:
+        type: string
+      operationDate:
+        type: string
+        format: date
+      currency:
+        type: string
+      outletName:
+        type: string
+      sumWithDiscount:
+        type: number
+      paymentTypeId:
+        type: integer
+        format: int64
+      serviceFee:
+        type: number
+  TransactionDetailDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      productName:
+        type: string
+      quantityGoods:
+        type: integer
+        format: int32
+      measure:
+        type: string
+      productCost:
+        type: number
+      costBeforeDiscount:
+        type: number
+      sumDiscount:
+        type: number
+      serviceFee:
+        type: number
+  TransactionFullDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      direct:
+        type: string
+      operationDate:
+        type: string
+        format: date
+      currency:
+        type: string
+      outletName:
+        type: string
+      sumWithDiscount:
+        type: number
+      paymentTypeId:
+        type: integer
+        format: int64
+      serviceFee:
+        type: number
+      transactionsDetail:
+        type: array
+        items:
+          $ref: '#/components/schemas/TransactionDetailDto'
+  WayTransactionDetailInfoRequest:
+    required:
+      - ID
+    type: object
+    properties:
+      ID:
+        type: integer
+        description: ID транзакции
+        format: int64
+        example: 1
+  Response:
+    type: object
+    properties:
+      body:
+        type: object
+      error:
+        type: object
+        properties:
+          cause:
+            type: object
+            properties:
+              stackTrace:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    classLoaderName:
+                      type: string
+                    moduleName:
+                      type: string
+                    moduleVersion:
+                      type: string
+                    methodName:
+                      type: string
+                    fileName:
+                      type: string
+                    lineNumber:
+                      type: integer
+                      format: int32
+                    nativeMethod:
+                      type: boolean
+                    className:
+                      type: string
+              message:
+                type: string
+              localizedMessage:
+                type: string
+          stackTrace:
+            type: array
+            items:
+              type: object
+              properties:
+                classLoaderName:
+                  type: string
+                moduleName:
+                  type: string
+                moduleVersion:
+                  type: string
+                methodName:
+                  type: string
+                fileName:
+                  type: string
+                lineNumber:
+                  type: integer
+                  format: int32
+                nativeMethod:
+                  type: boolean
+                className:
+                  type: string
+          message:
+            type: string
+          suppressed:
+            type: array
+            items:
+              type: object
+              properties:
+                stackTrace:
+                  type: array
+                  items:
+                    type: object
+                    properties:
+                      classLoaderName:
+                        type: string
+                      moduleName:
+                        type: string
+                      moduleVersion:
+                        type: string
+                      methodName:
+                        type: string
+                      fileName:
+                        type: string
+                      lineNumber:
+                        type: integer
+                        format: int32
+                      nativeMethod:
+                        type: boolean
+                      className:
+                        type: string
+                message:
+                  type: string
+                localizedMessage:
+                  type: string
+          localizedMessage:
+            type: string
+  WayTransactionsByContractRequest:
+    required:
+      - Card
+      - TransactionCount
+    type: object
+    properties:
+      Card:
+        type: integer
+        description: ID договора/карты
+        format: int64
+        example: 1
+      TransactionCount:
+        type: integer
+        description: Кол-во транзакций
+        format: int64
+        example: 1
+  TariffContractDetailsFullDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор записи связи таринфной программы и договора
+        format: int64
+        example: 1
+      tariffId:
+        type: integer
+        description: Идентификатор тарифной программы
+        format: int64
+        example: 1
+      tariffCode:
+        type: string
+        description: Код тарифной программы
+        example: someTariffCode
+      tariffName:
+        type: string
+        description: Название тарифной программы
+        example: someTariffName
+      tariffDescription:
+        type: string
+        description: Описание тарифной программы
+        example: someDescription
+      tariffType:
+        type: string
+        description: Тип тарифной программы
+        example: someTariffType
+      dateStart:
+        type: string
+        description: Дата начала
+        format: date-time
+      dateEnd:
+        type: string
+        description: Дата окончания
+        format: date-time
+      dateDeactive:
+        type: string
+        description: Дата отключения
+        format: date-time
+  PageSRProductRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/SRProductRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageSRGoodsRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/SRGoodsRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageSRGeoRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/SRGeoRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageServiceRequestSearchGetDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/ServiceRequestSearchGetDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  ServiceRequestSearchGetDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        format: int64
+      number:
+        type: string
+      created:
+        type: string
+        format: date
+      createdBy:
+        type: integer
+        format: int64
+      channel:
+        type: string
+      type:
+        type: string
+      theme:
+        type: string
+      status:
+        type: string
+      personBuyerId:
+        type: integer
+        format: int64
+      personVendorId:
+        type: integer
+        format: int64
+  WayRestrictionsDTO:
+    type: object
+    properties:
+      ContractSearchMethod:
+        type: string
+      ContractScope:
+        type: string
+      ContractIdentifier:
+        type: string
+      ContractRelation:
+        type: string
+      CardGroupCode:
+        type: string
+      CardSequenceNumber:
+        type: string
+      ExpirationDate:
+        type: string
+  PageProductRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/ProductRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageGoodsRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/GoodsRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageGeoRestrictorDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/GeoRestrictorDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  ParticipantsTeamMembersDto:
+    type: object
+    properties:
+      teamMembers:
+        type: array
+        description: Команда договора
+        items:
+          $ref: '#/components/schemas/TeamMemberInfoDto'
+  ParticipantsOrgMembersDto:
+    type: object
+    properties:
+      orgMember:
+        type: array
+        description: Участники договора
+        items:
+          $ref: '#/components/schemas/OrgMemberInfoDto'
+      personBuyerId:
+        type: integer
+        description: Идентификатор покупателя
+        format: int64
+        example: 1
+      personVendorId:
+        type: integer
+        description: Идентификатор поставщика
+        format: int64
+        example: 1
+  FuelCardDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор записи топливной карты
+        format: int64
+        example: 1
+      cardNumber:
+        type: string
+        description: Номер карты
+        example: '1'
+      idW4:
+        type: string
+        description: Идентификатор карты, присвоенный процессингом после привязки
+      productType:
+        type: string
+        description: Тип продукта
+        example: '1'
+      cardStatus:
+        type: string
+        description: Статус топливной карты
+        example: '1'
+      lastUseDate:
+        type: string
+        description: Дата последнего использования
+        format: date
+      created:
+        type: string
+        description: Дата создания
+        format: date-time
+      madeMpcFlag:
+        type: boolean
+        description: Выпущен МПК
+      primaryDriver:
+        $ref: '#/components/schemas/PersonDto'
+      cardIssueDate:
+        type: string
+        description: Дата выпуска ТК
+        format: date
+      w4Status:
+        type: string
+        description: Статус w4
+      w4Error:
+        type: string
+        description: Текст ошибки w4
+      cardGroup:
+        type: string
+        description: Группу карт
+      contractNumber:
+        type: string
+        description: Номер договора
+      clientId:
+        type: integer
+        description: Иденитфикатор контрагента
+        format: int64
+      clientShortName:
+        type: string
+        description: Наименование контрагента
+      contractAcceptorId:
+        type: string
+        description: Договор с которого перенесли ТК
+      contractRecipientId:
+        type: string
+        description: Договор на который перенесли ТК
+      cardCarrierType:
+        type: string
+        description: Тип носителя ТК
+      contractId:
+        type: integer
+        description: Идентификатор договора
+        format: int64
+        example: 1
+      serviceRequestId:
+        type: integer
+        description: Идентификатор обращения
+        format: int64
+        example: 1
+  PageFuelCardDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/FuelCardDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  PageDriverDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/DriverDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean
+  ContractBaseDto:
+    type: object
+    properties:
+      id:
+        type: integer
+        description: Идентификатор договора
+        format: int64
+      contractNumber:
+        type: string
+        description: № договора
+        example: ЯР014069670
+      contractName:
+        type: string
+        description: Наименование договора
+        example: №ЯР014069670 от 02.02.2024
+      contractType:
+        type: string
+        description: Тип договора
+        example: Коммерческий
+      saleStage:
+        type: string
+        description: Этап продаж договора
+        example: Активен
+      statusApproval:
+        type: string
+        description: Статус
+        example: Active
+      paymentTerms:
+        type: string
+        description: Условия оплаты
+        example: Предоплата
+      invoicingScheme:
+        type: string
+        description: Схема оплаты
+        example: Без выставления счетов
+      clientId:
+        type: integer
+        description: Идентификатор КА
+        format: int64
+      shortName:
+        type: string
+        description: Краткое наименование КА
+        example: Ромашка
+      inn:
+        type: string
+        description: ИНН Контрагента
+        example: '520205004556'
+      waitingAgreement:
+        type: boolean
+        description: Ожидает согласования
+      discountScheme:
+        type: string
+        description: Схема расчета скидки
+      closureDate:
+        type: string
+        description: Дата закрытия договора
+        format: date
+      conclusionDate:
+        type: string
+        description: Дата заключения договора
+        format: date
+      effectiveDate:
+        type: string
+        description: Дата вступления в силу договора
+        format: date
+      endDate:
+        type: string
+        description: Дата окончания договора
+        format: date
+      askuStatus:
+        type: string
+        description: Статус синхронизации с АСКУ
+        example: New
+      askuError:
+        type: string
+        description: Текст ошибки синхронизации с АСКУ
+        example: Internal server error
+      w4Status:
+        type: string
+        description: Статус синхронизации с процессингом
+        example: New
+      w4Error:
+        type: string
+        description: Текст ошибки синхронизации с процессингом
+        example: Internal server error
+      primaryFollowDivision:
+        type: string
+        description: Основной офис сопровождения
+        example: Офис продаж в г. Москва
+      primaryFollowOrganization:
+        type: string
+        description: Основное отделение сопровождения
+        example: Офис продаж в регионе Москва
+      edoFlag:
+        type: boolean
+        description: ЭДО
+  PageContractBaseDto:
+    type: object
+    properties:
+      totalElements:
+        type: integer
+        format: int64
+      totalPages:
+        type: integer
+        format: int32
+      size:
+        type: integer
+        format: int32
+      content:
+        type: array
+        items:
+          $ref: '#/components/schemas/ContractBaseDto'
+      number:
+        type: integer
+        format: int32
+      sort:
+        type: array
+        items:
+          $ref: '#/components/schemas/SortObject'
+      numberOfElements:
+        type: integer
+        format: int32
+      pageable:
+        $ref: '#/components/schemas/PageableObject'
+      first:
+        type: boolean
+      last:
+        type: boolean
+      empty:
+        type: boolean

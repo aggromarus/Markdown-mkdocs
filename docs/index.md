@@ -34,17 +34,3 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
         ...       # Other markdown pages, images and other files.
 
-
-## Test
-
-
-    some text bla bla bla
-
-
-## Test2
-
-
-    аспрмоилтдь
-
-
-## Test 3
