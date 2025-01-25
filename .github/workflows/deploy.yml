@@ -54,5 +54,18 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: "/home/runner/work/Test/Test/site/github/workspace/site"
+          source: "/home/runner/work/Test/Test/site/"
           target: "/var/www/html"
+
+      - name: Copy dir
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          debug: true
+          script: |
+            pwd
+            cd Test
+            cp -r  /var/www/html/github/workspace/site /var/www/html/
