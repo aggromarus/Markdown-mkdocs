@@ -22,8 +22,6 @@ jobs:
         run: |
           python -m venv venv
           source venv/bin/activate
-#          pip install mkdocs-macros-plugin
-#          pip install mkdocs-plantuml-plugin
           pip install -r requirements.txt
 
       - name: Check current directory
