@@ -24,29 +24,22 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Check current directory
-        run: |
-          pwd
-          ls -la
-
-      - name: Pull latest changes
-        run: |
-          git gc --prune=now
-          git pull origin main  # Обновление локальных файлов с удалённого репозитория
-
       - name: Build MkDocs site
         run: |
           source venv/bin/activate
           mkdocs build
           deactivate
-          ls -al /home/runner/work/Test/Test/site
 
-      - name: Set up SSH for deployment
-        run: |
-          mkdir -p ~/.ssh
-          echo "${{ secrets.KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
+      - name: Clean target directory
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            echo "Очистка старых файлов в /var/www/html/"
+            sudo rm -rf /var/www/html/*
 
       - name: Copy files to server
         uses: appleboy/scp-action@master
@@ -54,5 +47,16 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: "/home/runner/work/Test/Test/site/"  # Папка билда
-          target: "/var/www/html/"  # Конечная папка на сервере
+          source: "/home/runner/work/Test/Test/site/"
+          target: "/var/www/html/"
+
+      - name: Debug target directory
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_IP }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: 22
+          script: |
+            echo "Проверка содержимого директории /var/www/html/"
+            ls -la /var/www/html/
