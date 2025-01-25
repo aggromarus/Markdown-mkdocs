@@ -59,4 +59,4 @@ jobs:
           script: |
             ls -la 
             cd Test
-            cp -r /var/www/html/ site/*
+            cp -r  site/testpage/* /var/www/html/
