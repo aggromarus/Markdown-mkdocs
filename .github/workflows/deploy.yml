@@ -48,15 +48,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -H ${{ secrets.SERVER_IP }} >> ~/.ssh/known_hosts
 
-      - name: Deploy to server
-        uses: appleboy/ssh-action@master
+      - name: Copy files to server
+        uses: appleboy/scp-action@v1
         with:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          port: 22
-          debug: true
-          script: |
-            ls -la 
-            cd Test
-            cp -r  site/* /var/www/html/
+          source: "home/runner/work/Test/Test/site"
+          target: "/var/www/html"
