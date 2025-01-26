@@ -15,6 +15,5 @@ plugins:
       num_workers: 8
 nav:
   - Home: index.md
-  - First Mapping Page: about.md
   - BankDTO Mapping example: mapping_table.md
   - DiagramsPage: diagrams.md
