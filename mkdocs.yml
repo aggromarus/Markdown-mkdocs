@@ -1,10 +1,19 @@
-site_name: Docs
+site_name: Тестовый стенд для документации
 theme:
-  name: mkdocs
-  highlightjs: true
-  hljs_languages:
-    - yaml
-    - rust
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      name: "default"
+    - media: "(prefers-color-scheme: dark)"
+      name: "dark"
+
+extra:
+  theme_switcher: true
+
 docs_dir: docs
 plugins:
   - search
@@ -16,4 +25,6 @@ plugins:
 nav:
   - Home: index.md
   - BankDTO Mapping example: mapping_table.md
-  - DiagramsPage: diagrams.md
+  - Диаграммы:
+      - Sequence: Группа 1/diagrams.md
+      - Activity: Группа 1/activity_diagram.md

@@ -1,0 +1,524 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../diagrams/">
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Activity - Тестовый стенд для документации</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Тестовый стенд для документации" class="md-header__button md-logo" aria-label="Тестовый стенд для документации" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Тестовый стенд для документации
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Activity
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mapping_table/" class="md-tabs__link">
+        
+  
+    
+  
+  BankDTO Mapping example
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../diagrams/" class="md-tabs__link">
+          
+  
+  Диаграммы
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Тестовый стенд для документации" class="md-nav__button md-logo" aria-label="Тестовый стенд для документации" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Тестовый стенд для документации
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping_table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BankDTO Mapping example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Диаграммы
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Диаграммы
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../diagrams/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="_1">Диаграмма активности</h1>
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="342px" preserveAspectRatio="xMidYMid meet" style="width:551px;height:342px;background:#FFFFFF;" version="1.1" viewBox="0 0 551 342" width="551px" zoomAndPan="magnify" class="diagram"><defs/><g><ellipse cx="276.0107" cy="20" fill="#222222" rx="10" ry="10" style="stroke:#222222;stroke-width:1;"/><polygon fill="#F1F1F1" points="32,54.7036,89.2129,54.7036,101.2129,66.7036,89.2129,78.7036,32,78.7036,20,66.7036,32,54.7036" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="64.6064" y="88.9141">да</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="32" y="70.5117">условие 1</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="66.998" x="27.1074" y="110.4141"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="37.1074" y="131.5527">Текст 1</text><polygon fill="#F1F1F1" points="133.2129,54.7036,190.4258,54.7036,202.4258,66.7036,190.4258,78.7036,133.2129,78.7036,121.2129,66.7036,133.2129,54.7036" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="165.8193" y="88.9141">да</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="133.2129" y="70.5117">условие 2</text><rect fill="#F1F1F1" height="47.9375" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="97.1973" x="113.2207" y="110.4141"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52.998" x="123.2207" y="131.5527">Срочное</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77.1973" x="123.2207" y="145.5215">завершение</text><ellipse cx="161.8193" cy="204.3516" fill="#FFFFFF" fill-opacity="0.00000" rx="11" ry="11" style="stroke:#222222;stroke-width:1;"/><ellipse cx="161.8193" cy="204.3516" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;"/><polygon fill="#F1F1F1" points="242.418,54.7036,299.6309,54.7036,311.6309,66.7036,299.6309,78.7036,242.418,78.7036,230.418,66.7036,242.418,54.7036" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="275.0244" y="88.9141">да</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="242.418" y="70.5117">условие 3</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="66.998" x="237.5254" y="110.4141"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="247.5254" y="131.5527">Текст 3</text><polygon fill="#F1F1F1" points="343.6309,54.7036,400.8438,54.7036,412.8438,66.7036,400.8438,78.7036,343.6309,78.7036,331.6309,66.7036,343.6309,54.7036" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="376.2373" y="88.9141">да</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="343.6309" y="70.5117">условие 4</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.5728" x="412.8438" y="51.3047">ничего не</text><text fill="#000000" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55.9292" x="412.8438" y="64.1094">подходит</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="66.998" x="338.7383" y="110.4141"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="348.7383" y="131.5527">Текст 4</text><rect fill="#F1F1F1" height="47.9375" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="107.1699" x="432.8438" y="135.5117"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87.1699" x="442.8438" y="156.6504">Текст: ничего</text><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75.8613" x="442.8438" y="170.6191">не подошло</text><rect fill="#F1F1F1" height="33.9688" rx="12.5" ry="12.5" style="stroke:#181818;stroke-width:0.5;" width="107.334" x="222.3438" y="255.3516"/><text fill="#000000" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87.334" x="232.3438" y="276.4902">продолжение</text><ellipse cx="276.0107" cy="320.3203" fill="#FFFFFF" fill-opacity="0.00000" rx="11" ry="11" style="stroke:#222222;stroke-width:1;"/><ellipse cx="276.0107" cy="320.3203" fill="#222222" rx="6" ry="6" style="stroke:#222222;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="161.8193" x2="161.8193" y1="158.3516" y2="193.3516"/><polygon fill="#181818" points="157.8193,183.3516,161.8193,193.3516,165.8193,183.3516,161.8193,187.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="60.6064" x2="60.6064" y1="78.7036" y2="110.4141"/><polygon fill="#181818" points="56.6064,100.4141,60.6064,110.4141,64.6064,100.4141,60.6064,104.4141" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="60.6064" x2="60.6064" y1="144.3828" y2="235.3516"/><polygon fill="#181818" points="56.6064,225.3516,60.6064,235.3516,64.6064,225.3516,60.6064,229.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="161.8193" x2="161.8193" y1="78.7036" y2="110.4141"/><polygon fill="#181818" points="157.8193,100.4141,161.8193,110.4141,165.8193,100.4141,161.8193,104.4141" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="271.0244" x2="271.0244" y1="78.7036" y2="110.4141"/><polygon fill="#181818" points="267.0244,100.4141,271.0244,110.4141,275.0244,100.4141,271.0244,104.4141" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="271.0244" x2="271.0244" y1="144.3828" y2="235.3516"/><polygon fill="#181818" points="267.0244,225.3516,271.0244,235.3516,275.0244,225.3516,271.0244,229.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="372.2373" x2="372.2373" y1="78.7036" y2="110.4141"/><polygon fill="#181818" points="368.2373,100.4141,372.2373,110.4141,376.2373,100.4141,372.2373,104.4141" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="372.2373" x2="372.2373" y1="144.3828" y2="235.3516"/><polygon fill="#181818" points="368.2373,225.3516,372.2373,235.3516,376.2373,225.3516,372.2373,229.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="101.2129" x2="121.2129" y1="66.7036" y2="66.7036"/><polygon fill="#181818" points="111.2129,62.7036,121.2129,66.7036,111.2129,70.7036,115.2129,66.7036" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="202.4258" x2="230.418" y1="66.7036" y2="66.7036"/><polygon fill="#181818" points="220.418,62.7036,230.418,66.7036,220.418,70.7036,224.418,66.7036" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="311.6309" x2="331.6309" y1="66.7036" y2="66.7036"/><polygon fill="#181818" points="321.6309,62.7036,331.6309,66.7036,321.6309,70.7036,325.6309,66.7036" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="276.0107" x2="276.0107" y1="30" y2="35"/><line style="stroke:#181818;stroke-width:1;" x1="276.0107" x2="60.6064" y1="35" y2="35"/><line style="stroke:#181818;stroke-width:1;" x1="60.6064" x2="60.6064" y1="35" y2="54.7036"/><polygon fill="#181818" points="56.6064,44.7036,60.6064,54.7036,64.6064,44.7036,60.6064,48.7036" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="412.8438" x2="486.4287" y1="66.7036" y2="66.7036"/><line style="stroke:#181818;stroke-width:1;" x1="486.4287" x2="486.4287" y1="66.7036" y2="135.5117"/><polygon fill="#181818" points="482.4287,125.5117,486.4287,135.5117,490.4287,125.5117,486.4287,129.5117" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="486.4287" x2="486.4287" y1="183.4492" y2="235.3516"/><polygon fill="#181818" points="482.4287,225.3516,486.4287,235.3516,490.4287,225.3516,486.4287,229.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="60.6064" x2="486.4287" y1="235.3516" y2="235.3516"/><line style="stroke:#181818;stroke-width:1;" x1="276.0107" x2="276.0107" y1="235.3516" y2="255.3516"/><polygon fill="#181818" points="272.0107,245.3516,276.0107,255.3516,280.0107,245.3516,276.0107,249.3516" style="stroke:#181818;stroke-width:1;"/><line style="stroke:#181818;stroke-width:1;" x1="276.0107" x2="276.0107" y1="289.3203" y2="309.3203"/><polygon fill="#181818" points="272.0107,299.3203,276.0107,309.3203,280.0107,299.3203,276.0107,303.3203" style="stroke:#181818;stroke-width:1;"/></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="ACTIVITY" height="342px" preserveAspectRatio="xMidYMid meet" style="width:551px;height:342px;background:#1B1B1B;" version="1.1" viewBox="0 0 551 342" width="551px" zoomAndPan="magnify" class="diagram"><defs/><g><rect fill="#1B1B1B" height="342" style="stroke:#FFFFFF00;stroke-width:1;" width="551" x="0" y="0"/><ellipse cx="276.0107" cy="20" fill="#DDDDDD" rx="10" ry="10" style="stroke:#DDDDDD;stroke-width:1;"/><polygon fill="#313139" points="32,54.7036,89.2129,54.7036,101.2129,66.7036,89.2129,78.7036,32,78.7036,20,66.7036,32,54.7036" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="64.6064" y="88.9141">да</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="32" y="70.5117">условие 1</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="66.998" x="27.1074" y="110.4141"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="37.1074" y="131.5527">Текст 1</text><polygon fill="#313139" points="133.2129,54.7036,190.4258,54.7036,202.4258,66.7036,190.4258,78.7036,133.2129,78.7036,121.2129,66.7036,133.2129,54.7036" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="165.8193" y="88.9141">да</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="133.2129" y="70.5117">условие 2</text><rect fill="#313139" height="47.9375" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="97.1973" x="113.2207" y="110.4141"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="52.998" x="123.2207" y="131.5527">Срочное</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="77.1973" x="123.2207" y="145.5215">завершение</text><ellipse cx="161.8193" cy="204.3516" fill="#FFFFFF" fill-opacity="0.00000" rx="11" ry="11" style="stroke:#DDDDDD;stroke-width:1;"/><ellipse cx="161.8193" cy="204.3516" fill="#DDDDDD" rx="6" ry="6" style="stroke:#DDDDDD;stroke-width:1;"/><polygon fill="#313139" points="242.418,54.7036,299.6309,54.7036,311.6309,66.7036,299.6309,78.7036,242.418,78.7036,230.418,66.7036,242.418,54.7036" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="275.0244" y="88.9141">да</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="242.418" y="70.5117">условие 3</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="66.998" x="237.5254" y="110.4141"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="247.5254" y="131.5527">Текст 3</text><polygon fill="#313139" points="343.6309,54.7036,400.8438,54.7036,412.8438,66.7036,400.8438,78.7036,343.6309,78.7036,331.6309,66.7036,343.6309,54.7036" style="stroke:#E7E7E7;stroke-width:0.5;"/><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="14.3462" x="376.2373" y="88.9141">да</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.2129" x="343.6309" y="70.5117">условие 4</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="57.5728" x="412.8438" y="51.3047">ничего не</text><text fill="#FFFFFF" font-family="sans-serif" font-size="11" lengthAdjust="spacing" textLength="55.9292" x="412.8438" y="64.1094">подходит</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="66.998" x="338.7383" y="110.4141"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="46.998" x="348.7383" y="131.5527">Текст 4</text><rect fill="#313139" height="47.9375" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="107.1699" x="432.8438" y="135.5117"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87.1699" x="442.8438" y="156.6504">Текст: ничего</text><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="75.8613" x="442.8438" y="170.6191">не подошло</text><rect fill="#313139" height="33.9688" rx="12.5" ry="12.5" style="stroke:#E7E7E7;stroke-width:0.5;" width="107.334" x="222.3438" y="255.3516"/><text fill="#FFFFFF" font-family="sans-serif" font-size="12" lengthAdjust="spacing" textLength="87.334" x="232.3438" y="276.4902">продолжение</text><ellipse cx="276.0107" cy="320.3203" fill="#FFFFFF" fill-opacity="0.00000" rx="11" ry="11" style="stroke:#DDDDDD;stroke-width:1;"/><ellipse cx="276.0107" cy="320.3203" fill="#DDDDDD" rx="6" ry="6" style="stroke:#DDDDDD;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="161.8193" x2="161.8193" y1="158.3516" y2="193.3516"/><polygon fill="#E7E7E7" points="157.8193,183.3516,161.8193,193.3516,165.8193,183.3516,161.8193,187.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="60.6064" x2="60.6064" y1="78.7036" y2="110.4141"/><polygon fill="#E7E7E7" points="56.6064,100.4141,60.6064,110.4141,64.6064,100.4141,60.6064,104.4141" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="60.6064" x2="60.6064" y1="144.3828" y2="235.3516"/><polygon fill="#E7E7E7" points="56.6064,225.3516,60.6064,235.3516,64.6064,225.3516,60.6064,229.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="161.8193" x2="161.8193" y1="78.7036" y2="110.4141"/><polygon fill="#E7E7E7" points="157.8193,100.4141,161.8193,110.4141,165.8193,100.4141,161.8193,104.4141" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="271.0244" x2="271.0244" y1="78.7036" y2="110.4141"/><polygon fill="#E7E7E7" points="267.0244,100.4141,271.0244,110.4141,275.0244,100.4141,271.0244,104.4141" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="271.0244" x2="271.0244" y1="144.3828" y2="235.3516"/><polygon fill="#E7E7E7" points="267.0244,225.3516,271.0244,235.3516,275.0244,225.3516,271.0244,229.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="372.2373" x2="372.2373" y1="78.7036" y2="110.4141"/><polygon fill="#E7E7E7" points="368.2373,100.4141,372.2373,110.4141,376.2373,100.4141,372.2373,104.4141" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="372.2373" x2="372.2373" y1="144.3828" y2="235.3516"/><polygon fill="#E7E7E7" points="368.2373,225.3516,372.2373,235.3516,376.2373,225.3516,372.2373,229.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="101.2129" x2="121.2129" y1="66.7036" y2="66.7036"/><polygon fill="#E7E7E7" points="111.2129,62.7036,121.2129,66.7036,111.2129,70.7036,115.2129,66.7036" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="202.4258" x2="230.418" y1="66.7036" y2="66.7036"/><polygon fill="#E7E7E7" points="220.418,62.7036,230.418,66.7036,220.418,70.7036,224.418,66.7036" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="311.6309" x2="331.6309" y1="66.7036" y2="66.7036"/><polygon fill="#E7E7E7" points="321.6309,62.7036,331.6309,66.7036,321.6309,70.7036,325.6309,66.7036" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="276.0107" x2="276.0107" y1="30" y2="35"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="276.0107" x2="60.6064" y1="35" y2="35"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="60.6064" x2="60.6064" y1="35" y2="54.7036"/><polygon fill="#E7E7E7" points="56.6064,44.7036,60.6064,54.7036,64.6064,44.7036,60.6064,48.7036" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="412.8438" x2="486.4287" y1="66.7036" y2="66.7036"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="486.4287" x2="486.4287" y1="66.7036" y2="135.5117"/><polygon fill="#E7E7E7" points="482.4287,125.5117,486.4287,135.5117,490.4287,125.5117,486.4287,129.5117" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="486.4287" x2="486.4287" y1="183.4492" y2="235.3516"/><polygon fill="#E7E7E7" points="482.4287,225.3516,486.4287,235.3516,490.4287,225.3516,486.4287,229.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="60.6064" x2="486.4287" y1="235.3516" y2="235.3516"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="276.0107" x2="276.0107" y1="235.3516" y2="255.3516"/><polygon fill="#E7E7E7" points="272.0107,245.3516,276.0107,255.3516,280.0107,245.3516,276.0107,249.3516" style="stroke:#E7E7E7;stroke-width:1;"/><line style="stroke:#E7E7E7;stroke-width:1;" x1="276.0107" x2="276.0107" y1="289.3203" y2="309.3203"/><polygon fill="#E7E7E7" points="272.0107,299.3203,276.0107,309.3203,280.0107,299.3203,276.0107,303.3203" style="stroke:#E7E7E7;stroke-width:1;"/></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.sections"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
