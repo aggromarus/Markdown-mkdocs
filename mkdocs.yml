@@ -5,6 +5,7 @@ theme:
   hljs_languages:
     - yaml
     - rust
+docs_dir: docs
 plugins:
   - search
   - macros:
@@ -14,6 +15,6 @@ plugins:
       num_workers: 8
 nav:
   - Home: index.md
-  - About: about.md
-  - MappingPage: mapping_table.md
+  - First Mapping Page: about.md
+  - BankDTO Mapping example: mapping_table.md
   - DiagramsPage: diagrams.md
