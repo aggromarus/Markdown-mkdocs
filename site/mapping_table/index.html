@@ -46,10 +46,6 @@
       
     
     
-      <link rel="stylesheet" href="../assets/mkdocs_puml/puml.css">
-    
-      <link rel="stylesheet" href="../assets/mkdocs_puml/interaction.css">
-    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -74,11 +70,6 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
-      
-        
-        <a href="#_1" class="md-skip">
-          Skip to content
-        </a>
       
     </div>
     <div data-md-component="announce">
@@ -312,19 +303,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    BankDTO Mapping example
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -335,79 +313,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basebankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      BaseBankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#permission" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permission
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      BankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#createbankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      CreateBankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#onlyiddto" class="md-nav__link">
-    <span class="md-ellipsis">
-      OnlyIdDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-contractname" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Номер контракта: contractName
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -519,70 +424,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#basebankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      BaseBankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#permission" class="md-nav__link">
-    <span class="md-ellipsis">
-      Permission
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      BankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#createbankaccountdto" class="md-nav__link">
-    <span class="md-ellipsis">
-      CreateBankAccountDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#onlyiddto" class="md-nav__link">
-    <span class="md-ellipsis">
-      OnlyIdDto
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#-contractname" class="md-nav__link">
-    <span class="md-ellipsis">
-      - Номер контракта: contractName
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -597,413 +438,420 @@
                   
 
 
-<h1 id="_1">Маппинг данных</h1>
-<h2 id="basebankaccountdto">BaseBankAccountDto</h2>
+  <h1>BankDTO Mapping example</h1>
+
 <table>
 <thead>
 <tr>
-<th>Поле</th>
-<th>Тип данных</th>
+<th>Поле UI</th>
+<th>API field</th>
+<th>BD field</th>
+<th>Тип</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td></td>
 <td>id</td>
+<td></td>
 <td>integer</td>
-<td>Идентификатор банковского счета</td>
+<td></td>
 </tr>
 <tr>
-<td>status</td>
-<td>string</td>
-<td>Статус банковского счета</td>
-</tr>
-<tr>
-<td>bankId</td>
+<td></td>
+<td>finAccountId</td>
+<td></td>
 <td>integer</td>
-<td>Идентификатор банка</td>
+<td>Идентификатор фин. аккаута</td>
 </tr>
 <tr>
-<td>currencyId</td>
+<td></td>
+<td>cardNumber</td>
+<td></td>
+<td>string</td>
+<td>Номер топливной карты</td>
+</tr>
+<tr>
+<td></td>
+<td>idW4</td>
+<td></td>
+<td>string</td>
+<td>Идентификатор карты, присвоенный процессингом после привязки</td>
+</tr>
+<tr>
+<td></td>
+<td>fuelCardStatus</td>
+<td></td>
+<td>string</td>
+<td>Статус топливной карты</td>
+</tr>
+<tr>
+<td></td>
+<td>transferFlag</td>
+<td></td>
+<td>boolean</td>
+<td>Карта перенесена</td>
+</tr>
+<tr>
+<td></td>
+<td>cardType</td>
+<td></td>
+<td>string</td>
+<td>Тип топливной карты</td>
+</tr>
+<tr>
+<td></td>
+<td>productType</td>
+<td></td>
+<td>string</td>
+<td>Тип продукта</td>
+</tr>
+<tr>
+<td></td>
+<td>cardCommissionStatus</td>
+<td></td>
+<td>string</td>
+<td>Статус списания комиссии за ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>cardCarrierType</td>
+<td></td>
+<td>string</td>
+<td>Тип носителя</td>
+</tr>
+<tr>
+<td></td>
+<td>changeStatusReason</td>
+<td></td>
+<td>string</td>
+<td>Причина блокировки\разблокировки</td>
+</tr>
+<tr>
+<td></td>
+<td>contractAcceptorId</td>
+<td></td>
+<td>string</td>
+<td>Договор с которого перенесли ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>contractRecipientId</td>
+<td></td>
+<td>string</td>
+<td>Договор на который перенесли ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>cardTransferDate</td>
+<td></td>
+<td>string</td>
+<td>Дата переноса ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>comments</td>
+<td></td>
+<td>string</td>
+<td>Примечания менеджера</td>
+</tr>
+<tr>
+<td></td>
+<td>lastActivityDate</td>
+<td></td>
+<td>string</td>
+<td>Дата последнего использования</td>
+</tr>
+<tr>
+<td></td>
+<td>cardIssueDate</td>
+<td></td>
+<td>string</td>
+<td>Дата выпуска ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>cardExpireDate</td>
+<td></td>
+<td>string</td>
+<td>Срок действия ТК</td>
+</tr>
+<tr>
+<td></td>
+<td>availableBalance</td>
+<td></td>
+<td>number</td>
+<td>Доступный остаток</td>
+</tr>
+<tr>
+<td></td>
+<td>maxPinAttempts</td>
+<td></td>
 <td>integer</td>
-<td><a name='bankaccount-currencyid'><a/>Идентификатор валюты</td>
+<td>MAX счетчик неверного ввода PIN</td>
 </tr>
 <tr>
-<td>type</td>
-<td>string</td>
-<td>Вид счета</td>
-</tr>
-<tr>
-<td>accountNumber</td>
-<td>string</td>
-<td>Номер счета</td>
-</tr>
-<tr>
-<td>budgetAccount</td>
-<td>string</td>
-<td>Лицевой счет</td>
-</tr>
-<tr>
-<td>correspondent</td>
-<td>string</td>
-<td>Корреспондент</td>
-</tr>
-<tr>
-<td>purpose</td>
-<td>string</td>
-<td>Назначение</td>
-</tr>
-<tr>
-<td>exchequerId</td>
+<td></td>
+<td>pinAttemptsCount</td>
+<td></td>
 <td>integer</td>
-<td>Идентификатор УФК/Департамента</td>
+<td>Текущее количество неверных попыток</td>
 </tr>
 <tr>
-<td>primaryBankAccountFlg</td>
+<td></td>
+<td>pinResetCount</td>
+<td></td>
+<td>integer</td>
+<td>Количество сбросов PIN</td>
+</tr>
+<tr>
+<td></td>
+<td>pinResetDate</td>
+<td></td>
+<td>string</td>
+<td>Дата последнего сброса счетчика неверного ввода PIN</td>
+</tr>
+<tr>
+<td></td>
+<td>roadServiceFlag</td>
+<td></td>
 <td>boolean</td>
-<td>Основной банковский счет</td>
+<td>Услуга «Оплата дорожных сборов»</td>
 </tr>
 <tr>
-<td>_permissions</td>
-<td>object</td>
-<td>(смотрите вложенные поля ниже)</td>
+<td></td>
+<td>autodorServiceFlag</td>
+<td></td>
+<td>boolean</td>
+<td>Услуга «Автодор»</td>
 </tr>
 <tr>
-<td>type</td>
+<td></td>
+<td>madeMpcFlag</td>
+<td></td>
+<td>boolean</td>
+<td>Выпущен МПК</td>
+</tr>
+<tr>
+<td></td>
+<td>w4Status</td>
+<td></td>
+<td>string</td>
+<td>Статус передачи в W4, справочник ЛОВ</td>
+</tr>
+<tr>
+<td></td>
+<td>w4Error</td>
+<td></td>
+<td>string</td>
+<td>Ошибка передачи в W4</td>
+</tr>
+<tr>
+<td></td>
+<td>contractId</td>
+<td></td>
+<td>integer</td>
+<td>Идентификатор контракта</td>
+</tr>
+<tr>
+<td></td>
+<td>serviceRequestId</td>
+<td></td>
+<td>integer</td>
+<td>Идентификатор обращения</td>
+</tr>
+<tr>
+<td></td>
+<td>personId</td>
+<td></td>
+<td>integer</td>
+<td>Идентификатор водителя</td>
+</tr>
+<tr>
+<td></td>
+<td>firstName</td>
+<td></td>
+<td>string</td>
+<td>Имя</td>
+</tr>
+<tr>
+<td></td>
+<td>lastName</td>
+<td></td>
+<td>string</td>
+<td>Фамилия</td>
+</tr>
+<tr>
+<td></td>
+<td>middleName</td>
+<td></td>
+<td>string</td>
+<td>Отчество</td>
+</tr>
+<tr>
+<td></td>
+<td>email</td>
+<td></td>
+<td>string</td>
+<td>Email</td>
+</tr>
+<tr>
+<td></td>
+<td>phone</td>
+<td></td>
+<td>string</td>
+<td>Данные пользователя</td>
+</tr>
+<tr>
+<td></td>
+<td>primaryFlag</td>
+<td></td>
+<td>boolean</td>
+<td>Флаг основного водителя</td>
+</tr>
+<tr>
+<td></td>
+<td>direct</td>
+<td></td>
 <td>string</td>
 <td></td>
 </tr>
 <tr>
-<td>create</td>
-<td>boolean</td>
+<td></td>
+<td>operationDate</td>
+<td></td>
+<td>string</td>
 <td></td>
 </tr>
 <tr>
-<td>view</td>
-<td>boolean</td>
+<td></td>
+<td>currency</td>
+<td></td>
+<td>string</td>
 <td></td>
 </tr>
 <tr>
-<td>edit</td>
-<td>boolean</td>
+<td></td>
+<td>outletName</td>
+<td></td>
+<td>string</td>
 <td></td>
 </tr>
 <tr>
-<td>delete</td>
-<td>boolean</td>
+<td></td>
+<td>sumWithDiscount</td>
+<td></td>
+<td>number</td>
 <td></td>
 </tr>
 <tr>
-<td>methods</td>
-<td>array</td>
+<td></td>
+<td>paymentTypeId</td>
+<td></td>
+<td>integer</td>
 <td></td>
 </tr>
 <tr>
-<td>childPermissions</td>
-<td>array</td>
 <td></td>
+<td>serviceFee</td>
+<td></td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>ID</td>
+<td></td>
+<td>integer</td>
+<td>ID транзакции</td>
+</tr>
+<tr>
+<td></td>
+<td>Card</td>
+<td></td>
+<td>integer</td>
+<td>ID договора/карты</td>
+</tr>
+<tr>
+<td></td>
+<td>TransactionCount</td>
+<td></td>
+<td>integer</td>
+<td>Кол-во транзакций</td>
+</tr>
+<tr>
+<td></td>
+<td>productName</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>quantityGoods</td>
+<td></td>
+<td>integer</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>measure</td>
+<td></td>
+<td>string</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>productCost</td>
+<td></td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>costBeforeDiscount</td>
+<td></td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>sumDiscount</td>
+<td></td>
+<td>number</td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td>user</td>
+<td></td>
+<td>string</td>
+<td>Пользователь</td>
+</tr>
+<tr>
+<td></td>
+<td>transferType</td>
+<td></td>
+<td>string</td>
+<td>Тип перевода</td>
+</tr>
+<tr>
+<td></td>
+<td>transferAmount</td>
+<td></td>
+<td>integer</td>
+<td>Сумма перевода</td>
+</tr>
+<tr>
+<td></td>
+<td>created</td>
+<td></td>
+<td>string</td>
+<td>Дата перевода</td>
 </tr>
 </tbody>
 </table>
-<h2 id="permission">Permission</h2>
-<table>
-<thead>
-<tr>
-<th>Поле</th>
-<th>Тип данных</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>type</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>create</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>view</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>edit</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>delete</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>methods</td>
-<td>array</td>
-<td></td>
-</tr>
-<tr>
-<td>childPermissions</td>
-<td>array</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="bankaccountdto">BankAccountDto</h2>
-<table>
-<thead>
-<tr>
-<th>Поле</th>
-<th>Тип данных</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>integer</td>
-<td>Идентификатор банковского счета</td>
-</tr>
-<tr>
-<td>status</td>
-<td>string</td>
-<td>Статус банковского счета</td>
-</tr>
-<tr>
-<td>bankId</td>
-<td>integer</td>
-<td>Идентификатор банка</td>
-</tr>
-<tr>
-<td>currencyId</td>
-<td>integer</td>
-<td>Идентификатор валюты</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Вид счета</td>
-</tr>
-<tr>
-<td>accountNumber</td>
-<td>string</td>
-<td>Номер счета</td>
-</tr>
-<tr>
-<td>budgetAccount</td>
-<td>string</td>
-<td>Лицевой счет</td>
-</tr>
-<tr>
-<td>correspondent</td>
-<td>string</td>
-<td>Корреспондент</td>
-</tr>
-<tr>
-<td>purpose</td>
-<td>string</td>
-<td>Назначение</td>
-</tr>
-<tr>
-<td>exchequerId</td>
-<td>integer</td>
-<td>Идентификатор УФК/Департамента</td>
-</tr>
-<tr>
-<td>primaryBankAccountFlg</td>
-<td>boolean</td>
-<td>Основной банковский счет</td>
-</tr>
-<tr>
-<td>dateActivate</td>
-<td>string</td>
-<td>Дата активации счета</td>
-</tr>
-<tr>
-<td>dateDeactivate</td>
-<td>string</td>
-<td>Дата деактивации счета</td>
-</tr>
-<tr>
-<td>_permissions</td>
-<td>object</td>
-<td>(смотрите вложенные поля ниже)</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>create</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>view</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>edit</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>delete</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>methods</td>
-<td>array</td>
-<td></td>
-</tr>
-<tr>
-<td>childPermissions</td>
-<td>array</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="createbankaccountdto">CreateBankAccountDto</h2>
-<table>
-<thead>
-<tr>
-<th>Поле</th>
-<th>Тип данных</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>integer</td>
-<td>Идентификатор банковского счета</td>
-</tr>
-<tr>
-<td>status</td>
-<td>string</td>
-<td>Статус банковского счета</td>
-</tr>
-<tr>
-<td>bankId</td>
-<td>integer</td>
-<td>Идентификатор банка</td>
-</tr>
-<tr>
-<td>currencyId</td>
-<td>integer</td>
-<td>Идентификатор валюты</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td>Вид счета</td>
-</tr>
-<tr>
-<td>accountNumber</td>
-<td>string</td>
-<td>Номер счета</td>
-</tr>
-<tr>
-<td>budgetAccount</td>
-<td>string</td>
-<td>Лицевой счет</td>
-</tr>
-<tr>
-<td>correspondent</td>
-<td>string</td>
-<td>Корреспондент</td>
-</tr>
-<tr>
-<td>purpose</td>
-<td>string</td>
-<td>Назначение</td>
-</tr>
-<tr>
-<td>exchequerId</td>
-<td>integer</td>
-<td>Идентификатор УФК/Департамента</td>
-</tr>
-<tr>
-<td>primaryBankAccountFlg</td>
-<td>boolean</td>
-<td>Основной банковский счет</td>
-</tr>
-<tr>
-<td>dateOpen</td>
-<td>string</td>
-<td>Дата открытия</td>
-</tr>
-<tr>
-<td>dateClose</td>
-<td>string</td>
-<td>Дата закрытия</td>
-</tr>
-<tr>
-<td>_permissions</td>
-<td>object</td>
-<td>(смотрите вложенные поля ниже)</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td></td>
-</tr>
-<tr>
-<td>create</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>view</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>edit</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>delete</td>
-<td>boolean</td>
-<td></td>
-</tr>
-<tr>
-<td>methods</td>
-<td>array</td>
-<td></td>
-</tr>
-<tr>
-<td>childPermissions</td>
-<td>array</td>
-<td></td>
-</tr>
-</tbody>
-</table>
-<h2 id="onlyiddto">OnlyIdDto</h2>
-<table>
-<thead>
-<tr>
-<th>Поле</th>
-<th>Тип данных</th>
-<th>Описание</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>id</td>
-<td>integer</td>
-<td>Идентификатор созданной сущности</td>
-</tr>
-</tbody>
-</table>
-<h2 id="-contractname">- Номер контракта: contractName</h2>
 
 
 
@@ -1060,12 +908,6 @@
     
     
       <script src="../assets/javascripts/bundle.60a45f97.min.js"></script>
-      
-        <script src="../assets/mkdocs_puml/puml.js"></script>
-      
-        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
-      
-        <script src="../assets/mkdocs_puml/interaction.js"></script>
       
     
   </body>
