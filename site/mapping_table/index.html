@@ -470,7 +470,7 @@
 <td>cardNumber</td>
 <td></td>
 <td>string</td>
-<td>Номер топливной карты</td>
+<td>cardNumber.description</td>
 </tr>
 <tr>
 <td></td>
@@ -652,7 +652,7 @@
 <td>contractId</td>
 <td></td>
 <td>integer</td>
-<td>Идентификатор контракта</td>
+<td>contractId.description</td>
 </tr>
 <tr>
 <td></td>
@@ -848,6 +848,244 @@
 <td>created</td>
 <td></td>
 <td>string</td>
+<td>Дата перевода</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>—</td>
+</tr>
+<tr>
+<td>finAccountId</td>
+<td>Идентификатор фин. аккаута</td>
+</tr>
+<tr>
+<td>cardNumber</td>
+<td>Номер топливной карты</td>
+</tr>
+<tr>
+<td>idW4</td>
+<td>Идентификатор карты, присвоенный процессингом после привязки</td>
+</tr>
+<tr>
+<td>fuelCardStatus</td>
+<td>Статус топливной карты</td>
+</tr>
+<tr>
+<td>transferFlag</td>
+<td>Карта перенесена</td>
+</tr>
+<tr>
+<td>cardType</td>
+<td>Тип топливной карты</td>
+</tr>
+<tr>
+<td>productType</td>
+<td>Тип продукта</td>
+</tr>
+<tr>
+<td>cardCommissionStatus</td>
+<td>Статус списания комиссии за ТК</td>
+</tr>
+<tr>
+<td>cardCarrierType</td>
+<td>Тип носителя</td>
+</tr>
+<tr>
+<td>changeStatusReason</td>
+<td>Причина блокировки\разблокировки</td>
+</tr>
+<tr>
+<td>contractAcceptorId</td>
+<td>Договор с которого перенесли ТК</td>
+</tr>
+<tr>
+<td>contractRecipientId</td>
+<td>Договор на который перенесли ТК</td>
+</tr>
+<tr>
+<td>cardTransferDate</td>
+<td>Дата переноса ТК</td>
+</tr>
+<tr>
+<td>comments</td>
+<td>Примечания менеджера</td>
+</tr>
+<tr>
+<td>lastActivityDate</td>
+<td>Дата последнего использования</td>
+</tr>
+<tr>
+<td>cardIssueDate</td>
+<td>Дата выпуска ТК</td>
+</tr>
+<tr>
+<td>cardExpireDate</td>
+<td>Срок действия ТК</td>
+</tr>
+<tr>
+<td>availableBalance</td>
+<td>Доступный остаток</td>
+</tr>
+<tr>
+<td>maxPinAttempts</td>
+<td>MAX счетчик неверного ввода PIN</td>
+</tr>
+<tr>
+<td>pinAttemptsCount</td>
+<td>Текущее количество неверных попыток</td>
+</tr>
+<tr>
+<td>pinResetCount</td>
+<td>Количество сбросов PIN</td>
+</tr>
+<tr>
+<td>pinResetDate</td>
+<td>Дата последнего сброса счетчика неверного ввода PIN</td>
+</tr>
+<tr>
+<td>roadServiceFlag</td>
+<td>Услуга «Оплата дорожных сборов»</td>
+</tr>
+<tr>
+<td>autodorServiceFlag</td>
+<td>Услуга «Автодор»</td>
+</tr>
+<tr>
+<td>madeMpcFlag</td>
+<td>Выпущен МПК</td>
+</tr>
+<tr>
+<td>w4Status</td>
+<td>Статус передачи в W4, справочник ЛОВ</td>
+</tr>
+<tr>
+<td>w4Error</td>
+<td>Ошибка передачи в W4</td>
+</tr>
+<tr>
+<td>contractId</td>
+<td>Идентификатор контракта</td>
+</tr>
+<tr>
+<td>serviceRequestId</td>
+<td>Идентификатор обращения</td>
+</tr>
+<tr>
+<td>personId</td>
+<td>Идентификатор водителя</td>
+</tr>
+<tr>
+<td>firstName</td>
+<td>Имя</td>
+</tr>
+<tr>
+<td>lastName</td>
+<td>Фамилия</td>
+</tr>
+<tr>
+<td>middleName</td>
+<td>Отчество</td>
+</tr>
+<tr>
+<td>email</td>
+<td>Email</td>
+</tr>
+<tr>
+<td>phone</td>
+<td>Телефон</td>
+</tr>
+<tr>
+<td>primaryFlag</td>
+<td>Флаг основного водителя</td>
+</tr>
+<tr>
+<td>direct</td>
+<td>—</td>
+</tr>
+<tr>
+<td>operationDate</td>
+<td>—</td>
+</tr>
+<tr>
+<td>currency</td>
+<td>—</td>
+</tr>
+<tr>
+<td>outletName</td>
+<td>—</td>
+</tr>
+<tr>
+<td>sumWithDiscount</td>
+<td>—</td>
+</tr>
+<tr>
+<td>paymentTypeId</td>
+<td>—</td>
+</tr>
+<tr>
+<td>serviceFee</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ID</td>
+<td>ID транзакции</td>
+</tr>
+<tr>
+<td>Card</td>
+<td>ID договора/карты</td>
+</tr>
+<tr>
+<td>TransactionCount</td>
+<td>Кол-во транзакций</td>
+</tr>
+<tr>
+<td>productName</td>
+<td>—</td>
+</tr>
+<tr>
+<td>quantityGoods</td>
+<td>—</td>
+</tr>
+<tr>
+<td>measure</td>
+<td>—</td>
+</tr>
+<tr>
+<td>productCost</td>
+<td>—</td>
+</tr>
+<tr>
+<td>costBeforeDiscount</td>
+<td>—</td>
+</tr>
+<tr>
+<td>sumDiscount</td>
+<td>—</td>
+</tr>
+<tr>
+<td>user</td>
+<td>Пользователь</td>
+</tr>
+<tr>
+<td>transferType</td>
+<td>Тип перевода</td>
+</tr>
+<tr>
+<td>transferAmount</td>
+<td>Сумма перевода</td>
+</tr>
+<tr>
+<td>created</td>
 <td>Дата перевода</td>
 </tr>
 </tbody>

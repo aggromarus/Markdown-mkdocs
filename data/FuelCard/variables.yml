@@ -1,0 +1,201 @@
+fields:
+  id:
+    type: integer
+    description: Идентификатор
+    format: int64
+  finAccountId:
+    type: integer
+    description: Идентификатор фин. аккаута
+    format: int64
+  cardNumber:
+    type: string
+    description: Номер топливной карты
+  idW4:
+    type: string
+    description: Идентификатор карты, присвоенный процессингом после привязки
+  fuelCardStatus:
+    type: string
+    description: Статус топливной карты
+  transferFlag:
+    type: boolean
+    description: Карта перенесена
+  cardType:
+    type: string
+    description: Тип топливной карты
+  productType:
+    type: string
+    description: Тип продукта
+  cardCommissionStatus:
+    type: string
+    description: Статус списания комиссии за ТК
+  cardCarrierType:
+    type: string
+    description: Тип носителя
+  changeStatusReason:
+    type: string
+    description: Причина блокировки\разблокировки
+  contractAcceptorId:
+    type: string
+    description: Договор с которого перенесли ТК
+  contractRecipientId:
+    type: string
+    description: Договор на который перенесли ТК
+  cardTransferDate:
+    type: string
+    description: Дата переноса ТК
+    format: date
+  comments:
+    type: string
+    description: Примечания менеджера
+  lastActivityDate:
+    type: string
+    description: Дата последнего использования
+    format: date
+  cardIssueDate:
+    type: string
+    description: Дата выпуска ТК
+    format: date
+  cardExpireDate:
+    type: string
+    description: Срок действия ТК
+    format: date
+  availableBalance:
+    type: number
+    description: Доступный остаток
+  maxPinAttempts:
+    type: integer
+    description: MAX счетчик неверного ввода PIN
+    format: int32
+  pinAttemptsCount:
+    type: integer
+    description: Текущее количество неверных попыток
+    format: int32
+  pinResetCount:
+    type: integer
+    description: Количество сбросов PIN
+    format: int32
+  pinResetDate:
+    type: string
+    description: Дата последнего сброса счетчика неверного ввода PIN
+    format: date
+  roadServiceFlag:
+    type: boolean
+    description: Услуга «Оплата дорожных сборов»
+  autodorServiceFlag:
+    type: boolean
+    description: Услуга «Автодор»
+  madeMpcFlag:
+    type: boolean
+    description: Выпущен МПК
+  w4Status:
+    type: string
+    description: Статус передачи в W4, справочник ЛОВ
+  w4Error:
+    type: string
+    description: Ошибка передачи в W4
+  contractId:
+    type: integer
+    description: Идентификатор контракта
+    format: int64
+  serviceRequestId:
+    type: integer
+    description: Идентификатор обращения
+    format: int64
+    example: 1
+  id:
+    type: integer
+    description: Идентификатор связки водитель - топливная карта
+    format: int64
+  personId:
+    type: integer
+    description: Идентификатор водителя
+    format: int64
+  firstName:
+    type: string
+    description: Имя
+    example: Петр
+  lastName:
+    type: string
+    description: Фамилия
+    example: Петров
+  middleName:
+    type: string
+    description: Отчество
+    example: Петрович
+  email:
+    type: string
+    description: Email
+    example: example@mail.ru
+  phone:
+    type: string
+    description: 'Телефон'
+    example: '74043055643'
+  primaryFlag:
+    type: boolean
+    description: Флаг основного водителя
+  id:
+    type: integer
+    format: int64
+  direct:
+    type: string
+  operationDate:
+    type: string
+    format: date
+  currency:
+    type: string
+  outletName:
+    type: string
+  sumWithDiscount:
+    type: number
+  paymentTypeId:
+    type: integer
+    format: int64
+  serviceFee:
+    type: number
+  ID:
+    type: integer
+    description: ID транзакции
+    format: int64
+    example: 1
+  Card:
+    type: integer
+    description: ID договора/карты
+    format: int64
+    example: 1
+  TransactionCount:
+    type: integer
+    description: Кол-во транзакций
+    format: int64
+    example: 1
+  id:
+    type: integer
+    format: int64
+  productName:
+    type: string
+  quantityGoods:
+    type: integer
+    format: int32
+  measure:
+    type: string
+  productCost:
+    type: number
+  costBeforeDiscount:
+    type: number
+  sumDiscount:
+    type: number
+  serviceFee:
+    type: number
+  user:
+    type: string
+    description: Пользователь
+  transferType:
+    type: string
+    description: Тип перевода
+  transferAmount:
+    type: integer
+    description: Сумма перевода
+    format: int32
+  created:
+    type: string
+    description: Дата перевода
+    format: date-time
