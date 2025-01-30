@@ -1,93 +1,59 @@
-# Маппинг данных
-
-## BaseBankAccountDto
-| Поле               | Тип данных  | Описание                                                  |
-|--------------------|-------------|-----------------------------------------------------------|
-| id | integer | Идентификатор банковского счета                           |
-| status | string | Статус банковского счета                                  |
-| bankId | integer | Идентификатор банка                                       |
-| currencyId | integer | <a name='bankaccount-currencyid'><a/>Идентификатор валюты |
-| type | string | Вид счета                                                 |
-| accountNumber | string | Номер счета                                               |
-| budgetAccount | string | Лицевой счет                                              |
-| correspondent | string | Корреспондент                                             |
-| purpose | string | Назначение                                                |
-| exchequerId | integer | Идентификатор УФК/Департамента                            |
-| primaryBankAccountFlg | boolean | Основной банковский счет                                  |
-| _permissions | object | (смотрите вложенные поля ниже)                            |
-| type | string |                                                           |
-| create | boolean |                                                           |
-| view | boolean |                                                           |
-| edit | boolean |                                                           |
-| delete | boolean |                                                           |
-| methods | array |                                                           |
-| childPermissions | array |                                                           |
-
-## Permission
-| Поле               | Тип данных  | Описание                            |
-|--------------------|-------------|-------------------------------------|
-| type | string |  |
-| create | boolean |  |
-| view | boolean |  |
-| edit | boolean |  |
-| delete | boolean |  |
-| methods | array |  |
-| childPermissions | array |  |
-
-## BankAccountDto
-| Поле               | Тип данных  | Описание                            |
-|--------------------|-------------|-------------------------------------|
-| id | integer | Идентификатор банковского счета |
-| status | string | Статус банковского счета |
-| bankId | integer | Идентификатор банка |
-| currencyId | integer | Идентификатор валюты |
-| type | string | Вид счета |
-| accountNumber | string | Номер счета |
-| budgetAccount | string | Лицевой счет |
-| correspondent | string | Корреспондент |
-| purpose | string | Назначение |
-| exchequerId | integer | Идентификатор УФК/Департамента |
-| primaryBankAccountFlg | boolean | Основной банковский счет |
-| dateActivate | string | Дата активации счета |
-| dateDeactivate | string | Дата деактивации счета |
-| _permissions | object | (смотрите вложенные поля ниже) |
-| type | string |  |
-| create | boolean |  |
-| view | boolean |  |
-| edit | boolean |  |
-| delete | boolean |  |
-| methods | array |  |
-| childPermissions | array |  |
-
-## CreateBankAccountDto
-| Поле               | Тип данных  | Описание                            |
-|--------------------|-------------|-------------------------------------|
-| id | integer | Идентификатор банковского счета |
-| status | string | Статус банковского счета |
-| bankId | integer | Идентификатор банка |
-| currencyId | integer | Идентификатор валюты |
-| type | string | Вид счета |
-| accountNumber | string | Номер счета |
-| budgetAccount | string | Лицевой счет |
-| correspondent | string | Корреспондент |
-| purpose | string | Назначение |
-| exchequerId | integer | Идентификатор УФК/Департамента |
-| primaryBankAccountFlg | boolean | Основной банковский счет |
-| dateOpen | string | Дата открытия |
-| dateClose | string | Дата закрытия |
-| _permissions | object | (смотрите вложенные поля ниже) |
-| type | string |  |
-| create | boolean |  |
-| view | boolean |  |
-| edit | boolean |  |
-| delete | boolean |  |
-| methods | array |  |
-| childPermissions | array |  |
-
-## OnlyIdDto
-| Поле               | Тип данных  | Описание                            |
-|--------------------|-------------|-------------------------------------|
-| id | integer | Идентификатор созданной сущности |
-
-
-## - Номер контракта: {{ Contract.fields.ContractDto.properties.contractName.docName }}
+| Поле UI | API field            | BD field | Тип     | Описание                                                     |
+|---------|----------------------|----------|---------|--------------------------------------------------------------|
+|         | id                   |          | integer |                                                              |
+|         | finAccountId         |          | integer | Идентификатор фин. аккаута                                   |
+|         | cardNumber           |          | string  | Номер топливной карты                                        |
+|         | idW4                 |          | string  | Идентификатор карты, присвоенный процессингом после привязки |
+|         | fuelCardStatus       |          | string  | Статус топливной карты                                       |
+|         | transferFlag         |          | boolean | Карта перенесена                                             |
+|         | cardType             |          | string  | Тип топливной карты                                          |
+|         | productType          |          | string  | Тип продукта                                                 |
+|         | cardCommissionStatus |          | string  | Статус списания комиссии за ТК                               |
+|         | cardCarrierType      |          | string  | Тип носителя                                                 |
+|         | changeStatusReason   |          | string  | Причина блокировки\разблокировки                             |
+|         | contractAcceptorId   |          | string  | Договор с которого перенесли ТК                              |
+|         | contractRecipientId  |          | string  | Договор на который перенесли ТК                              |
+|         | cardTransferDate     |          | string  | Дата переноса ТК                                             |
+|         | comments             |          | string  | Примечания менеджера                                         |
+|         | lastActivityDate     |          | string  | Дата последнего использования                                |
+|         | cardIssueDate        |          | string  | Дата выпуска ТК                                              |
+|         | cardExpireDate       |          | string  | Срок действия ТК                                             |
+|         | availableBalance     |          | number  | Доступный остаток                                            |
+|         | maxPinAttempts       |          | integer | MAX счетчик неверного ввода PIN                              |
+|         | pinAttemptsCount     |          | integer | Текущее количество неверных попыток                          |
+|         | pinResetCount        |          | integer | Количество сбросов PIN                                       |
+|         | pinResetDate         |          | string  | Дата последнего сброса счетчика неверного ввода PIN          |
+|         | roadServiceFlag      |          | boolean | Услуга «Оплата дорожных сборов»                              |
+|         | autodorServiceFlag   |          | boolean | Услуга «Автодор»                                             |
+|         | madeMpcFlag          |          | boolean | Выпущен МПК                                                  |
+|         | w4Status             |          | string  | Статус передачи в W4, справочник ЛОВ                         |
+|         | w4Error              |          | string  | Ошибка передачи в W4                                         |
+|         | contractId           |          | integer | Идентификатор контракта                                      |
+|         | serviceRequestId     |          | integer | Идентификатор обращения                                      |
+|         | personId             |          | integer | Идентификатор водителя                                       |
+|         | firstName            |          | string  | Имя                                                          |
+|         | lastName             |          | string  | Фамилия                                                      |
+|         | middleName           |          | string  | Отчество                                                     |
+|         | email                |          | string  | Email                                                        |
+|         | phone                |          | string  | Данные пользователя                                          |
+|         | primaryFlag          |          | boolean | Флаг основного водителя                                      |
+|         | direct               |          | string  |                                                              |
+|         | operationDate        |          | string  |                                                              |
+|         | currency             |          | string  |                                                              |
+|         | outletName           |          | string  |                                                              |
+|         | sumWithDiscount      |          | number  |                                                              |
+|         | paymentTypeId        |          | integer |                                                              |
+|         | serviceFee           |          | number  |                                                              |
+|         | ID                   |          | integer | ID транзакции                                                |
+|         | Card                 |          | integer | ID договора/карты                                            |
+|         | TransactionCount     |          | integer | Кол-во транзакций                                            |
+|         | productName          |          | string  |                                                              |
+|         | quantityGoods        |          | integer |                                                              |
+|         | measure              |          | string  |                                                              |
+|         | productCost          |          | number  |                                                              |
+|         | costBeforeDiscount   |          | number  |                                                              |
+|         | sumDiscount          |          | number  |                                                              |
+|         | user                 |          | string  | Пользователь                                                 |
+|         | transferType         |          | string  | Тип перевода                                                 |
+|         | transferAmount       |          | integer | Сумма перевода                                               |
+|         | created              |          | string  | Дата перевода                                                |
