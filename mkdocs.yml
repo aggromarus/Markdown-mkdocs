@@ -22,6 +22,8 @@ plugins:
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
       num_workers: 8
+      interaction:
+        enabled: true
 nav:
   - Home: index.md
   - BankDTO Mapping example: mapping_table.md
