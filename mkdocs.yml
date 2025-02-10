@@ -17,7 +17,6 @@ repo_url: https://github.com/aggromarus/Test
 
 extra:
   theme_switcher: true
-  toc_title: "Мой собственный заголовок"
 docs_dir: docs
 plugins:
   - search
@@ -25,13 +24,10 @@ plugins:
       module_name: macros
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
-      num_workers: 8
-      interaction:
-        enabled: true
 nav:
   - Домашняя страница: index.md
   - BankDTO Mapping example: mapping_table.md
   - Диаграммы:
-      - Sequence: Group-1/diagrams.md
+      - Sequence: Group-1/diagram-sequence.md
       - Activity: Group-1/activity_diagram.md
       - Classes: Group-1/diagramm_classes.md
