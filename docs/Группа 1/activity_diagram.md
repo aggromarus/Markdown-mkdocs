@@ -1,6 +1,6 @@
 # Диаграмма активности
 
-```puml
+```plantuml
 @startuml
 
 start
