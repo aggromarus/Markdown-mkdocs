@@ -13,6 +13,10 @@ theme:
 
 extra:
   theme_switcher: true
+  extra_javascript:
+    - https://unpkg.com/@akebifiky/plantuml-encoder
+    - https://cdn.jsdelivr.net/npm/@aduh95/viz.js@2.1.2/dist/render.full.min.js
+    - plantuml-render.js
 
 docs_dir: docs
 plugins:

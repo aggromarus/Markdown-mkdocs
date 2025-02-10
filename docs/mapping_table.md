@@ -59,8 +59,8 @@
 |         | created                      |          | string  | Дата перевода                                                |
 
 
-| Поле                 | Описание                          |
-|----------------------|----------------------------------|
+| API поле | Описание |
+|---------|----------|
 {% for key, value in FuelCard.fields.items() -%}
-| {{ key }}           | {{ value.description if value.description else "—" }} |
+| {{ key }} | {{ value.description if value.description else "—" }} |
 {% endfor %}
