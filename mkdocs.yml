@@ -1,19 +1,23 @@
 site_name: Тестовый стенд для документации
 theme:
+  icon:
+    repo: fontawesome/brands/github-alt
   name: material
   features:
     - navigation.tabs
     - navigation.top
     - navigation.sections
+    - navigation.instant
   palette:
     - media: "(prefers-color-scheme: light)"
       name: "default"
     - media: "(prefers-color-scheme: dark)"
       name: "dark"
+repo_url: https://github.com/aggromarus/Test
 
 extra:
   theme_switcher: true
-
+  toc_title: "Мой собственный заголовок"
 docs_dir: docs
 plugins:
   - search
@@ -25,9 +29,9 @@ plugins:
       interaction:
         enabled: true
 nav:
-  - Home: index.md
+  - Домашняя страница: index.md
   - BankDTO Mapping example: mapping_table.md
   - Диаграммы:
-      - Sequence: Группа 1/diagrams.md
-      - Activity: Группа 1/activity_diagram.md
-      - Classes: Группа 1/diagramm_classes.md
+      - Sequence: Group-1/diagrams.md
+      - Activity: Group-1/activity_diagram.md
+      - Classes: Group-1/diagramm_classes.md

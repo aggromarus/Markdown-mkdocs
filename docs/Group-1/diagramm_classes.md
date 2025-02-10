@@ -21,6 +21,24 @@ protocol        protocol
 struct          struct
 @enduml
 ```
+### Таким образом надо занять немного места на странице
+```puml
+@startuml
+abstract        abstract
+abstract class  "abstract class"
+annotation      annotation
+circle          circle
+()              circle_short_form
+class           class
+diamond         diamond
+<>              diamond_short_form
+entity          entity
+enum            enum
+interface       interface
+protocol        protocol
+struct          struct
+@enduml
+```
 ###Так диаграмма выглядит под капотом.
 
 ![img.png](img.png) 
@@ -66,3 +84,9 @@ struct          struct
 </details>
 </details>
 
+## Тестовая ссылка для установки якоря
+#anchor
+
+Текст на странице.
+
+[Перейти к якорю](#anchor)
