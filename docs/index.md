@@ -8,6 +8,6 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 
 ## Проверка отображения заголовка №2
-[Переход на страницу диаграмм](Group-1/diagrams)
+[Переход на страницу диаграмм](Group-1/diagram-sequence.md)
 
-[И еще одна ссылка](Group-1/diagramm_classes.md#abc)
+[И еще одна ссылка](Group-1/diagramm_classes.md)

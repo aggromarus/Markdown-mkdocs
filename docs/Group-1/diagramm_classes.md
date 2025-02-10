@@ -21,7 +21,7 @@ protocol        protocol
 struct          struct
 @enduml
 ```
-### Таким образом надо занять немного места на странице
+## Таким образом надо занять немного места на странице
 ```puml
 @startuml
 abstract        abstract
@@ -39,11 +39,12 @@ protocol        protocol
 struct          struct
 @enduml
 ```
-###Так диаграмма выглядит под капотом.
-
 ![img.png](img.png) 
 
     а картинки, оказывается можно достаточно просто вставлять
+
+### Так диаграмма выглядит под капотом.
+
 ``` 
     @startuml
     abstract        abstract
@@ -68,7 +69,7 @@ struct          struct
 </details>
 
 
-### Вложенные скрывающиеся списки - матрешка
+#### Вложенные скрывающиеся списки - матрешка
 
 <details open>
 <summary>Section A</summary>
@@ -84,9 +85,6 @@ struct          struct
 </details>
 </details>
 
-## Тестовая ссылка для установки якоря
-#anchor
+### 111
 
-Текст на странице.
-
-[Перейти к якорю](#anchor)
+#### 11111
