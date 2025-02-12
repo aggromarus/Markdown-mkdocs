@@ -21,7 +21,7 @@ docs_dir: docs
 plugins:
   - search
   - macros:
-      module_name: macros
+      module_name: mapper
   - plantuml:
       puml_url: https://www.plantuml.com/plantuml/
 nav:

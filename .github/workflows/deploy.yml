@@ -47,7 +47,7 @@ jobs:
           host: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
-          source: "/home/runner/work/Test/Test/site/*"
+          source: "/home/runner/work/Test/Markdown-mkdocs/site/*"
           target: "/var/www/html/"
           strip_components: 3  # Удаляем корневую папку "github/workspace/site"
 
