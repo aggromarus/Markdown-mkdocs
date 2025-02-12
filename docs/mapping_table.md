@@ -58,9 +58,3 @@
 |         | transferAmount               |          | integer | Сумма перевода                                               |
 |         | created                      |          | string  | Дата перевода                                                |
 
-
-| API поле | Описание |
-|---------|----------|
-{% for key, value in FuelCard.fields.items() -%}
-| {{ key }} | {{ value.description if value.description else "—" }} |
-{% endfor %}
