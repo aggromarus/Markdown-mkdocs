@@ -31,3 +31,5 @@ nav:
       - Sequence: Group-1/diagram-sequence.md
       - Activity: Group-1/activity_diagram.md
       - Classes: Group-1/diagramm_classes.md
+  - Сервисы:
+      - Main: Group-2/services.md
