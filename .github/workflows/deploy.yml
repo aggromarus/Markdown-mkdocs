@@ -48,7 +48,7 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           source: "/home/runner/work/Markdown-mkdocs/Markdown-mkdocs/site/*"
-          target: "/var/www/html/"
+          target: "/var/www/mkdocs/"
           strip_components: 3  # Удаляем корневую папку "github/workspace/site"
 
       - name: Debug target directory
