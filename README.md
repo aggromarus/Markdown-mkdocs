@@ -32,3 +32,11 @@ brew install python
 ```
 pip install -r requirements.txt
 ```
+>4. Запуск локального сервера документации
+```
+mkdocs serve
+```
+>5. Запуск сборки
+```
+mkdocs build
+```
