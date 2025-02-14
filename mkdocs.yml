@@ -31,5 +31,7 @@ nav:
       - Sequence: Group-1/diagram-sequence.md
       - Activity: Group-1/activity_diagram.md
       - Classes: Group-1/diagramm_classes.md
+      - ER: Group-2/counterparty.md
+      - ER2: Group-2/schema_DB.md
   - Сервисы:
       - Main: Group-2/services.md

@@ -76,4 +76,15 @@ System -> User: Ответ пользователю
 </details>
 
 
+```dbml
+Table users {
+  id bigserial [pk]
+  name varchar(100)
+  email varchar(150) [unique]
+}
+Ref: users.id > orders.user_id
+
+```
+
+
 
