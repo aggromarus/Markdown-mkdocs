@@ -1,0 +1,65 @@
+= Короткая сказка
+Автор: ChatGPT
+Дата: 2025-02-14
+
+== Жил-был Кот
+
+Жил-был кот по имени Мурзик. Он мечтал стать великим путешественником, но жил в маленькой деревне.
+
+Однажды он встретил воробья, который рассказал ему про далёкие земли. Мурзик решил отправиться в путь...
+
+== Диаграмма героев
+
+[plantuml]
+----
+@startuml
+class Кот {
+  + имя: string
+  + путешествовать()
+}
+
+class Воробей {
+  + рассказатьИсторию()
+}
+
+Кот -> Воробей : слушает истории
+@enduml
+----
+
+[plantuml]
+----
+@startuml
+actor User
+entity System
+entity Database
+entity ExternalAPI
+entity NotificationService
+
+User -> System: Запрос на выполнение операции
+System -> Database: Проверка данных
+Database --> System: Данные найдены
+
+alt Если данные не найдены
+System -> Database: Запрос на создание данных
+Database --> System: Данные созданы
+else Данные найдены
+System -> ExternalAPI: Получение информации
+ExternalAPI --> System: Ответ от API
+end
+
+loop Обработка данных
+System -> NotificationService: Отправка уведомления
+NotificationService --> User: Уведомление об успехе
+end
+
+System -> Database: Обновление данных
+Database --> System: Данные обновлены
+System -> User: Ответ пользователю
+
+@enduml
+----
+
+[dbml]
+---
+
+---

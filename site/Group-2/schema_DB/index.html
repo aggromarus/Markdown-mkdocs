@@ -1,0 +1,694 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../counterparty/">
+      
+      
+        <link rel="next" href="../services/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>ER2 - Тестовый стенд для документации</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/puml.css">
+    
+      <link rel="stylesheet" href="../../assets/mkdocs_puml/interaction.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Тестовый стенд для документации" class="md-header__button md-logo" aria-label="Тестовый стенд для документации" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Тестовый стенд для документации
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ER2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/aggromarus/Test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Домашняя страница
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../mapping_table/" class="md-tabs__link">
+        
+  
+    
+  
+  BankDTO Mapping example
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../Group-1/diagram-sequence/" class="md-tabs__link">
+          
+  
+  Диаграммы
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../services/" class="md-tabs__link">
+          
+  
+  Сервисы
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Тестовый стенд для документации" class="md-nav__button md-logo" aria-label="Тестовый стенд для документации" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Тестовый стенд для документации
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/aggromarus/Test" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1M480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2m-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3m-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Домашняя страница
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mapping_table/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    BankDTO Mapping example
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Диаграммы
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Диаграммы
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Group-1/diagram-sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Group-1/activity_diagram/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Activity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Group-1/diagramm_classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../counterparty/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ER
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    ER2
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Сервисы
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Сервисы
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../services/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Main
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>ER2</h1>
+
+<div class='puml-container'><div class="puml light" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="1463px" preserveAspectRatio="xMidYMid meet" style="width:1483px;height:1463px;background:#FFFFFF;" version="1.1" viewBox="0 0 1483 1463" width="1483px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_flyway_schema_history"><rect codeLine="7" fill="#FFFFFF" height="206.9688" id="flyway_schema_history" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="195.9141" x="12" y="28.3"/><ellipse cx="27.5422" cy="42.3" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M30.511,47.9406 Q29.9329,48.2375 29.2922,48.3781 Q28.6516,48.5344 27.9485,48.5344 Q25.4485,48.5344 24.1204,46.8937 Q22.8079,45.2375 22.8079,42.1125 Q22.8079,38.9875 24.1204,37.3312 Q25.4485,35.675 27.9485,35.675 Q28.6516,35.675 29.2922,35.8312 Q29.9485,35.9875 30.511,36.2844 L30.511,39.0031 Q29.886,38.425 29.2922,38.1594 Q28.6985,37.8781 28.0735,37.8781 Q26.7297,37.8781 26.0422,38.9562 Q25.3547,40.0187 25.3547,42.1125 Q25.3547,44.2062 26.0422,45.2844 Q26.7297,46.3469 28.0735,46.3469 Q28.6985,46.3469 29.2922,46.0812 Q29.886,45.8 30.511,45.2219 L30.511,47.9406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162.2646" x="40.1072" y="47.1467">flyway_schema_history</text><line style="stroke:#000000;stroke-width:1;" x1="13" x2="206.9141" y1="56.3" y2="56.3"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="130.0811" x="18" y="73.2951">checksum: integer</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="168.5264" x="18" y="89.592">installed_on: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166.8174" x="18" y="105.8889">execution_time: integer</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="119.9023" x="18" y="122.1857">success: boolean</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="157.0078" x="18" y="138.4826">installed_rank: integer</text><line style="stroke:#000000;stroke-width:1;" x1="13" x2="206.9141" y1="145.7844" y2="145.7844"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="142.707" x="18" y="162.7795">version: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178.1787" x="18" y="179.0764">description: varchar(200)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="122.7051" x="18" y="195.3732">type: varchar(20)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148.2578" x="18" y="211.6701">script: varchar(1000)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.9141" x="18" y="227.967">installed_by: varchar(100)</text></g><g id="elem_t_bsn_unit"><rect codeLine="19" fill="#FFFFFF" height="337.3438" id="t_bsn_unit" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="239.8691" x="844.02" y="1089.96"/><ellipse cx="924.3706" cy="1103.96" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M927.3393,1109.6006 Q926.7612,1109.8975 926.1206,1110.0381 Q925.48,1110.1944 924.7768,1110.1944 Q922.2768,1110.1944 920.9487,1108.5538 Q919.6362,1106.8975 919.6362,1103.7725 Q919.6362,1100.6475 920.9487,1098.9913 Q922.2768,1097.335 924.7768,1097.335 Q925.48,1097.335 926.1206,1097.4913 Q926.7768,1097.6475 927.3393,1097.9444 L927.3393,1100.6631 Q926.7143,1100.085 926.1206,1099.8194 Q925.5268,1099.5381 924.9018,1099.5381 Q923.5581,1099.5381 922.8706,1100.6163 Q922.1831,1101.6788 922.1831,1103.7725 Q922.1831,1105.8663 922.8706,1106.9444 Q923.5581,1108.0069 924.9018,1108.0069 Q925.5268,1108.0069 926.1206,1107.7413 Q926.7143,1107.46 927.3393,1106.8819 L927.3393,1109.6006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71.668" x="941.8706" y="1108.8067">t_bsn_unit</text><line style="stroke:#000000;stroke-width:1;" x1="845.02" x2="1082.8891" y1="1117.96" y2="1117.96"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="850.02" y="1134.9551">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="850.02" y="1151.252">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="850.02" y="1167.5489">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="850.02" y="1183.8457">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115.0557" x="850.02" y="1200.1426">parent_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125.877" x="850.02" y="1216.4395">is_active: boolean</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="227.8691" x="850.02" y="1232.7364">primary_bank_account_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="850.02" y="1249.0332">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="845.02" x2="1082.8891" y1="1256.335" y2="1256.335"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.041" x="850.02" y="1273.3301">name: varchar(255)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131.6123" x="850.02" y="1289.627">type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.1621" x="850.02" y="1305.9239">department: varchar(150)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="188.1113" x="850.02" y="1322.2207">integration_id: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="207.9492" x="850.02" y="1338.5176">processing_code: varchar(30)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161.8887" x="850.02" y="1354.8145">currency: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108.4043" x="850.02" y="1371.1114">kpp: varchar(9)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="135.2422" x="850.02" y="1387.4082">phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.9473" x="850.02" y="1403.7051">email: varchar(350)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="196.9365" x="850.02" y="1420.002">contract_prefix: varchar(11)</text></g><g id="elem_t_manager"><rect codeLine="39" fill="#FFFFFF" height="174.375" id="t_manager" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="213.5371" x="243.19" y="44.6"/><ellipse cx="308.5015" cy="58.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M311.4703,64.2406 Q310.8921,64.5375 310.2515,64.6781 Q309.6109,64.8344 308.9078,64.8344 Q306.4078,64.8344 305.0796,63.1937 Q303.7671,61.5375 303.7671,58.4125 Q303.7671,55.2875 305.0796,53.6312 Q306.4078,51.975 308.9078,51.975 Q309.6109,51.975 310.2515,52.1312 Q310.9078,52.2875 311.4703,52.5844 L311.4703,55.3031 Q310.8453,54.725 310.2515,54.4594 Q309.6578,54.1781 309.0328,54.1781 Q307.689,54.1781 307.0015,55.2562 Q306.314,56.3187 306.314,58.4125 Q306.314,60.5062 307.0015,61.5844 Q307.689,62.6469 309.0328,62.6469 Q309.6578,62.6469 310.2515,62.3812 Q310.8453,62.1 311.4703,61.5219 L311.4703,64.2406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="75.4141" x="326.0015" y="63.4467">t_manager</text><line style="stroke:#000000;stroke-width:1;" x1="244.19" x2="455.7271" y1="72.6" y2="72.6"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="249.19" y="89.5951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="249.19" y="105.892">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="249.19" y="122.1889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="249.19" y="138.4857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="249.19" y="154.7826">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="249.19" y="171.0795">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="249.19" y="187.3764">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="244.19" x2="455.7271" y1="194.6781" y2="194.6781"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="201.5371" x="249.19" y="211.6732">manager_type: varchar(100)</text></g><g id="elem_t_notif_rejection_empl"><rect codeLine="49" fill="#FFFFFF" height="174.375" id="t_notif_rejection_empl" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="213.8105" x="492.05" y="44.6"/><ellipse cx="519.0725" cy="58.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M522.0413,64.2406 Q521.4631,64.5375 520.8225,64.6781 Q520.1819,64.8344 519.4788,64.8344 Q516.9788,64.8344 515.6506,63.1937 Q514.3381,61.5375 514.3381,58.4125 Q514.3381,55.2875 515.6506,53.6312 Q516.9788,51.975 519.4788,51.975 Q520.1819,51.975 520.8225,52.1312 Q521.4788,52.2875 522.0413,52.5844 L522.0413,55.3031 Q521.4163,54.725 520.8225,54.4594 Q520.2288,54.1781 519.6038,54.1781 Q518.26,54.1781 517.5725,55.2562 Q516.885,56.3187 516.885,58.4125 Q516.885,60.5062 517.5725,61.5844 Q518.26,62.6469 519.6038,62.6469 Q520.2288,62.6469 520.8225,62.3812 Q521.4163,62.1 522.0413,61.5219 L522.0413,64.2406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154.6494" x="534.1886" y="63.4467">t_notif_rejection_empl</text><line style="stroke:#000000;stroke-width:1;" x1="493.05" x2="704.8605" y1="72.6" y2="72.6"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="498.05" y="89.5951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="498.05" y="105.892">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="498.05" y="122.1889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="498.05" y="138.4857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="498.05" y="154.7826">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.0566" x="498.05" y="171.0795">template_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="498.05" y="187.3764">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="493.05" x2="704.8605" y1="194.6781" y2="194.6781"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="201.8105" x="498.05" y="211.6732">template_type: varchar(255)</text></g><g id="elem_t_position"><rect codeLine="59" fill="#FFFFFF" height="223.2656" id="t_position" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="190.1787" x="742.87" y="806.69"/><ellipse cx="800.2382" cy="820.69" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M803.2069,826.3306 Q802.6288,826.6275 801.9882,826.7681 Q801.3475,826.9244 800.6444,826.9244 Q798.1444,826.9244 796.8163,825.2837 Q795.5038,823.6275 795.5038,820.5025 Q795.5038,817.3775 796.8163,815.7212 Q798.1444,814.065 800.6444,814.065 Q801.3475,814.065 801.9882,814.2212 Q802.6444,814.3775 803.2069,814.6744 L803.2069,817.3931 Q802.5819,816.815 801.9882,816.5494 Q801.3944,816.2681 800.7694,816.2681 Q799.4257,816.2681 798.7382,817.3462 Q798.0507,818.4087 798.0507,820.5025 Q798.0507,822.5962 798.7382,823.6744 Q799.4257,824.7369 800.7694,824.7369 Q801.3944,824.7369 801.9882,824.4712 Q802.5819,824.19 803.2069,823.6119 L803.2069,826.3306 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="67.9424" x="817.7382" y="825.5367">t_position</text><line style="stroke:#000000;stroke-width:1;" x1="743.87" x2="932.0487" y1="834.69" y2="834.69"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="748.87" y="851.6851">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="748.87" y="867.982">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="748.87" y="884.2789">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="748.87" y="900.5757">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115.0557" x="748.87" y="916.8726">parent_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="748.87" y="933.1695">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161.1846" x="748.87" y="949.4664">primary_user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="748.87" y="965.7632">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="743.87" x2="932.0487" y1="973.065" y2="973.065"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131.6123" x="748.87" y="990.0601">type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.041" x="748.87" y="1006.357">name: varchar(255)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178.1787" x="748.87" y="1022.6539">description: varchar(255)</text></g><g id="elem_t_position_user"><rect codeLine="72" fill="#FFFFFF" height="190.6719" id="t_position_user" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="155.582" x="970.17" y="36.45"/><ellipse cx="993.1166" cy="50.45" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M996.0853,56.0906 Q995.5072,56.3875 994.8666,56.5281 Q994.226,56.6844 993.5228,56.6844 Q991.0228,56.6844 989.6947,55.0438 Q988.3822,53.3875 988.3822,50.2625 Q988.3822,47.1375 989.6947,45.4813 Q991.0228,43.825 993.5228,43.825 Q994.226,43.825 994.8666,43.9813 Q995.5228,44.1375 996.0853,44.4344 L996.0853,47.1531 Q995.4603,46.575 994.8666,46.3094 Q994.2728,46.0281 993.6478,46.0281 Q992.3041,46.0281 991.6166,47.1063 Q990.9291,48.1688 990.9291,50.2625 Q990.9291,52.3563 991.6166,53.4344 Q992.3041,54.4969 993.6478,54.4969 Q994.2728,54.4969 994.8666,54.2313 Q995.4603,53.95 996.0853,53.3719 L996.0853,56.0906 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="105.4785" x="1007.3269" y="55.2967">t_position_user</text><line style="stroke:#000000;stroke-width:1;" x1="971.17" x2="1124.752" y1="64.45" y2="64.45"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="976.17" y="81.4451">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="976.17" y="97.742">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="976.17" y="114.0389">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="976.17" y="130.3357">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111.9111" x="976.17" y="146.6326">start_date: date</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="105.6768" x="976.17" y="162.9295">end_date: date</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="124.3115" x="976.17" y="179.2264">position_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="976.17" y="195.5232">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="976.17" y="211.8201">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="971.17" x2="1124.752" y1="219.1219" y2="219.1219"/></g><g id="elem_t_replace"><rect codeLine="83" fill="#FFFFFF" height="239.5625" id="t_replace" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="195.0527" x="740.43" y="12"/><ellipse cx="801.9442" cy="26" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M804.9129,31.6406 Q804.3348,31.9375 803.6942,32.0781 Q803.0535,32.2344 802.3504,32.2344 Q799.8504,32.2344 798.5223,30.5938 Q797.2098,28.9375 797.2098,25.8125 Q797.2098,22.6875 798.5223,21.0313 Q799.8504,19.375 802.3504,19.375 Q803.0535,19.375 803.6942,19.5313 Q804.3504,19.6875 804.9129,19.9844 L804.9129,22.7031 Q804.2879,22.125 803.6942,21.8594 Q803.1004,21.5781 802.4754,21.5781 Q801.1317,21.5781 800.4442,22.6563 Q799.7567,23.7188 799.7567,25.8125 Q799.7567,27.9063 800.4442,28.9844 Q801.1317,30.0469 802.4754,30.0469 Q803.1004,30.0469 803.6942,29.7813 Q804.2879,29.5 804.9129,28.9219 L804.9129,31.6406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="64.5244" x="819.4442" y="30.8467">t_replace</text><line style="stroke:#000000;stroke-width:1;" x1="741.43" x2="934.4827" y1="40" y2="40"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="746.43" y="56.9951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="746.43" y="73.292">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="746.43" y="89.5889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="746.43" y="105.8857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176.5859" x="746.43" y="122.1826">user_substitute_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="167.3164" x="746.43" y="138.4795">user_replaced_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156.1396" x="746.43" y="154.7764">date_from: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.4102" x="746.43" y="171.0732">date_till: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="746.43" y="187.3701">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="741.43" x2="934.4827" y1="194.6719" y2="194.6719"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148.0186" x="746.43" y="211.667">reason: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.0527" x="746.43" y="227.9639">comments: varchar(1000)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.3564" x="746.43" y="244.2607">status: varchar(100)</text></g><g id="elem_t_service_region_bsn_unit"><rect codeLine="97" fill="#FFFFFF" height="158.0781" id="t_service_region_bsn_unit" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="208.4004" x="985.76" y="839.28"/><ellipse cx="998.76" cy="853.28" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M1001.7288,858.9206 Q1001.1506,859.2175 1000.51,859.3581 Q999.8694,859.5144 999.1663,859.5144 Q996.6663,859.5144 995.3381,857.8738 Q994.0256,856.2175 994.0256,853.0925 Q994.0256,849.9675 995.3381,848.3113 Q996.6663,846.655 999.1663,846.655 Q999.8694,846.655 1000.51,846.8113 Q1001.1663,846.9675 1001.7288,847.2644 L1001.7288,849.9831 Q1001.1038,849.405 1000.51,849.1394 Q999.9163,848.8581 999.2913,848.8581 Q997.9475,848.8581 997.26,849.9363 Q996.5725,850.9988 996.5725,853.0925 Q996.5725,855.1863 997.26,856.2644 Q997.9475,857.3269 999.2913,857.3269 Q999.9163,857.3269 1000.51,857.0613 Q1001.1038,856.78 1001.7288,856.2019 L1001.7288,858.9206 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180.4004" x="1010.76" y="858.1267">t_service_region_bsn_unit</text><line style="stroke:#000000;stroke-width:1;" x1="986.76" x2="1193.1604" y1="867.28" y2="867.28"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="991.76" y="884.2751">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="991.76" y="900.572">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="991.76" y="916.8689">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="991.76" y="933.1657">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="82.8447" x="991.76" y="949.4626">code: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="991.76" y="965.7595">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="991.76" y="982.0564">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="986.76" x2="1193.1604" y1="989.3581" y2="989.3581"/></g><g id="elem_t_timetable"><rect codeLine="106" fill="#FFFFFF" height="206.9688" id="t_timetable" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="247.6416" x="1229.14" y="814.84"/><ellipse cx="1309.4222" cy="828.84" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M1312.391,834.4806 Q1311.8129,834.7775 1311.1722,834.9181 Q1310.5316,835.0744 1309.8285,835.0744 Q1307.3285,835.0744 1306.0004,833.4337 Q1304.6879,831.7775 1304.6879,828.6525 Q1304.6879,825.5275 1306.0004,823.8712 Q1307.3285,822.215 1309.8285,822.215 Q1310.5316,822.215 1311.1722,822.3712 Q1311.8285,822.5275 1312.391,822.8244 L1312.391,825.5431 Q1311.766,824.965 1311.1722,824.6994 Q1310.5785,824.4181 1309.9535,824.4181 Q1308.6097,824.4181 1307.9222,825.4962 Q1307.2347,826.5587 1307.2347,828.6525 Q1307.2347,830.7462 1307.9222,831.8244 Q1308.6097,832.8869 1309.9535,832.8869 Q1310.5785,832.8869 1311.1722,832.6212 Q1311.766,832.34 1312.391,831.7619 L1312.391,834.4806 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="79.5771" x="1326.9222" y="833.6867">t_timetable</text><line style="stroke:#000000;stroke-width:1;" x1="1230.14" x2="1475.7816" y1="842.84" y2="842.84"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="1235.14" y="859.8351">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="1235.14" y="876.132">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="1235.14" y="892.4289">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="1235.14" y="908.7257">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="1235.14" y="925.0226">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="114.2832" x="1235.14" y="941.3195">start_work: time</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108.0488" x="1235.14" y="957.6164">end_work: time</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="1235.14" y="973.9132">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="1230.14" x2="1475.7816" y1="981.215" y2="981.215"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190.3672" x="1235.14" y="998.2101">day_of_week: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="235.6416" x="1235.14" y="1014.507">day_of_week_lower: varchar(100)</text></g><g id="elem_t_user"><rect codeLine="118" fill="#FFFFFF" height="435.125" id="t_user" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="236.1504" x="719.88" y="311.57"/><ellipse cx="812.6925" cy="325.57" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M815.6613,331.2106 Q815.0831,331.5075 814.4425,331.6481 Q813.8019,331.8044 813.0988,331.8044 Q810.5988,331.8044 809.2706,330.1637 Q807.9581,328.5075 807.9581,325.3825 Q807.9581,322.2575 809.2706,320.6012 Q810.5988,318.945 813.0988,318.945 Q813.8019,318.945 814.4425,319.1012 Q815.0988,319.2575 815.6613,319.5544 L815.6613,322.2731 Q815.0363,321.695 814.4425,321.4294 Q813.8488,321.1481 813.2238,321.1481 Q811.88,321.1481 811.1925,322.2262 Q810.505,323.2887 810.505,325.3825 Q810.505,327.4762 811.1925,328.5544 Q811.88,329.6169 813.2238,329.6169 Q813.8488,329.6169 814.4425,329.3512 Q815.0363,329.07 815.6613,328.4919 L815.6613,331.2106 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="43.0254" x="830.1925" y="330.4167">t_user</text><line style="stroke:#000000;stroke-width:1;" x1="720.88" x2="955.0304" y1="339.57" y2="339.57"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="725.88" y="356.5651">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="725.88" y="372.862">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="725.88" y="389.1589">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="725.88" y="405.4557">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="186.1016" x="725.88" y="421.7526">primary_position_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="224.1504" x="725.88" y="438.0495">primary_responsibility_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="725.88" y="454.3464">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="720.88" x2="955.0304" y1="461.6481" y2="461.6481"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="165.4912" x="725.88" y="478.6432">first_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163.3857" x="725.88" y="494.9401">last_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185.9375" x="725.88" y="511.237">middle_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="198.8643" x="725.88" y="527.5339">first_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="196.7588" x="725.88" y="543.8307">last_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="219.3105" x="725.88" y="560.1276">middle_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156.0508" x="725.88" y="576.4245">job_title: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189.4238" x="725.88" y="592.7214">job_title_gen: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="170.9736" x="725.88" y="609.0182">document: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125.5352" x="725.88" y="625.3151">login: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="188.1113" x="725.88" y="641.612">integration_id: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="207.7168" x="725.88" y="657.9089">employee_type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.9473" x="725.88" y="674.2057">email: varchar(350)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189.7246" x="725.88" y="690.5026">mobile_phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176.1211" x="725.88" y="706.7995">work_phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="181.959" x="725.88" y="723.0964">keycloak_id: varchar(225)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.3564" x="725.88" y="739.3932">status: varchar(100)</text></g><g id="link_t_bsn_unit_t_bsn_unit"><path codeLine="145" d="M866.28,1089.75 C866.28,1077.77 866.28,1070.3 866.28,1070.3 C866.28,1070.3 793.45,1070.3 793.45,1070.3 C793.45,1070.3 793.45,1445.3 793.45,1445.3 C793.45,1445.3 963.96,1445.3 963.96,1445.3 C963.96,1445.3 963.96,1456.6 963.96,1445.74 " fill="#FFFFFF" fill-opacity="0.00000" id="t_bsn_unit-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="963.96,1427.74,957.96,1445.74,969.96,1445.74,963.96,1427.74" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="77.5049" x="710.45" y="1296.7669">parent_id:id</text></g><g id="link_t_manager_t_bsn_unit"><path codeLine="146" d="M314.37,219.32 C314.37,484.24 314.37,1259.3 314.37,1259.3 C314.37,1259.3 637.9,1259.3 825.68,1259.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_manager-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="843.68,1259.3,825.68,1253.3,825.68,1265.3,843.68,1259.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="224.37" y="1000.0269">bsn_unit_id:id</text></g><g id="link_t_manager_t_user"><path codeLine="147" d="M385.55,219.02 C385.55,336.04 385.55,529.3 385.55,529.3 C385.55,529.3 567.34,529.3 701.39,529.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_manager-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="719.39,529.3,701.39,523.3,701.39,535.3,719.39,529.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="334.33" y="525.3669">user_id:id</text></g><g id="link_t_notif_rejection_empl_t_user"><path codeLine="148" d="M706.09,132.3 C720.35,132.3 730.16,132.3 730.16,132.3 C730.16,132.3 730.16,200.95 730.16,293.27 " fill="#FFFFFF" fill-opacity="0.00000" id="t_notif_rejection_empl-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="730.16,311.27,736.16,293.27,724.16,293.27,730.16,311.27" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="683.16" y="222.8169">user_id:id</text></g><g id="link_t_position_t_bsn_unit"><path codeLine="149" d="M888.53,1030.22 C888.53,1049.3 888.53,1051.5 888.53,1071.67 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="888.53,1089.67,894.53,1071.67,882.53,1071.67,888.53,1089.67" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="798.53" y="1056.0169">bsn_unit_id:id</text></g><g id="link_t_position_t_position"><path codeLine="150" d="M885.5,806.52 C885.5,789.4 885.5,777.3 885.5,777.3 C885.5,777.3 944.54,777.3 944.54,777.3 C944.54,777.3 944.54,1050.3 944.54,1050.3 C944.54,1050.3 910.79,1050.3 910.79,1050.3 C910.79,1050.3 910.79,1060.31 910.79,1048.26 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="910.79,1030.26,904.79,1048.26,916.79,1048.26,910.79,1030.26" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="77.5049" x="906.04" y="914.6369">parent_id:id</text></g><g id="link_t_position_t_user"><path codeLine="151" d="M790.41,806.27 C790.41,787.52 790.41,785.52 790.41,765.16 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="790.41,747.16,784.41,765.16,796.41,765.16,790.41,747.16" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="120.3389" x="669.41" y="772.7869">primary_user_id:id</text></g><g id="link_t_user_t_position"><path codeLine="158" d="M837.96,747.05 C837.96,767.55 837.96,769.69 837.96,788.56 " fill="#FFFFFF" fill-opacity="0.00000" id="t_user-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="837.96,806.56,843.96,788.56,831.96,788.56,837.96,806.56" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="143.4761" x="693.96" y="789.8769">primary_position_id:id</text></g><g id="link_t_position_user_t_position"><path codeLine="152" d="M977.96,227.34 C977.96,414.5 977.96,811.3 977.96,811.3 C977.96,811.3 976.07,811.3 951.28,811.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position_user-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="933.28,811.3,951.28,817.3,951.28,805.3,933.28,811.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="86.0996" x="978.96" y="537.7269">position_id:id</text></g><g id="link_t_position_user_t_user"><path codeLine="153" d="M969.72,132.3 C955.86,132.3 945.76,132.3 945.76,132.3 C945.76,132.3 945.76,200.95 945.76,293.27 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position_user-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="945.76,311.27,951.76,293.27,939.76,293.27,945.76,311.27" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="898.76" y="222.8669">user_id:id</text></g><g id="link_t_replace_t_user"><path codeLine="154" d="M805.45,251.81 C805.45,270.77 805.45,272.87 805.45,293.25 " fill="#FFFFFF" fill-opacity="0.00000" id="t_replace-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="805.45,311.25,811.45,293.25,799.45,293.25,805.45,311.25" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="134.6401" x="670.45" y="277.5969">user_substitute_id:id</text></g><g id="link_t_replace_t_user"><path codeLine="155" d="M870.47,251.81 C870.47,270.77 870.47,272.87 870.47,293.25 " fill="#FFFFFF" fill-opacity="0.00000" id="t_replace-to-t_user-1" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="870.47,311.25,876.47,293.25,864.47,293.25,870.47,311.25" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="126.0327" x="743.47" y="294.5969">user_replaced_id:id</text></g><g id="link_t_service_region_bsn_unit_t_bsn_unit"><path codeLine="156" d="M1018.47,997.68 C1018.47,1025.37 1018.47,1039.6 1018.47,1071.77 " fill="#FFFFFF" fill-opacity="0.00000" id="t_service_region_bsn_unit-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="1018.47,1089.77,1024.47,1071.77,1012.47,1071.77,1018.47,1089.77" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="928.47" y="1056.7969">bsn_unit_id:id</text></g><g id="link_t_timetable_t_bsn_unit"><path codeLine="157" d="M1228.91,1010.3 C1145.67,1010.3 1051.18,1010.3 1051.18,1010.3 C1051.18,1010.3 1051.18,1027.59 1051.18,1071.56 " fill="#FFFFFF" fill-opacity="0.00000" id="t_timetable-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="1051.18,1089.56,1057.18,1071.56,1045.18,1071.56,1051.18,1089.56" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="1010.42" y="1023.3669">bsn_unit_id:id</text></g></g></svg></div><div class="puml dark" style=""><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" data-diagram-type="CLASS" height="1463px" preserveAspectRatio="xMidYMid meet" style="width:1483px;height:1463px;background:#FFFFFF;" version="1.1" viewBox="0 0 1483 1463" width="1483px" zoomAndPan="magnify" class="diagram"><defs/><g><g id="elem_flyway_schema_history"><rect codeLine="7" fill="#FFFFFF" height="206.9688" id="flyway_schema_history" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="195.9141" x="12" y="28.3"/><ellipse cx="27.5422" cy="42.3" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M30.511,47.9406 Q29.9329,48.2375 29.2922,48.3781 Q28.6516,48.5344 27.9485,48.5344 Q25.4485,48.5344 24.1204,46.8937 Q22.8079,45.2375 22.8079,42.1125 Q22.8079,38.9875 24.1204,37.3312 Q25.4485,35.675 27.9485,35.675 Q28.6516,35.675 29.2922,35.8312 Q29.9485,35.9875 30.511,36.2844 L30.511,39.0031 Q29.886,38.425 29.2922,38.1594 Q28.6985,37.8781 28.0735,37.8781 Q26.7297,37.8781 26.0422,38.9562 Q25.3547,40.0187 25.3547,42.1125 Q25.3547,44.2062 26.0422,45.2844 Q26.7297,46.3469 28.0735,46.3469 Q28.6985,46.3469 29.2922,46.0812 Q29.886,45.8 30.511,45.2219 L30.511,47.9406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="162.2646" x="40.1072" y="47.1467">flyway_schema_history</text><line style="stroke:#000000;stroke-width:1;" x1="13" x2="206.9141" y1="56.3" y2="56.3"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="130.0811" x="18" y="73.2951">checksum: integer</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="168.5264" x="18" y="89.592">installed_on: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="166.8174" x="18" y="105.8889">execution_time: integer</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="119.9023" x="18" y="122.1857">success: boolean</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="157.0078" x="18" y="138.4826">installed_rank: integer</text><line style="stroke:#000000;stroke-width:1;" x1="13" x2="206.9141" y1="145.7844" y2="145.7844"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="142.707" x="18" y="162.7795">version: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178.1787" x="18" y="179.0764">description: varchar(200)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="122.7051" x="18" y="195.3732">type: varchar(20)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148.2578" x="18" y="211.6701">script: varchar(1000)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.9141" x="18" y="227.967">installed_by: varchar(100)</text></g><g id="elem_t_bsn_unit"><rect codeLine="19" fill="#FFFFFF" height="337.3438" id="t_bsn_unit" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="239.8691" x="844.02" y="1089.96"/><ellipse cx="924.3706" cy="1103.96" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M927.3393,1109.6006 Q926.7612,1109.8975 926.1206,1110.0381 Q925.48,1110.1944 924.7768,1110.1944 Q922.2768,1110.1944 920.9487,1108.5538 Q919.6362,1106.8975 919.6362,1103.7725 Q919.6362,1100.6475 920.9487,1098.9913 Q922.2768,1097.335 924.7768,1097.335 Q925.48,1097.335 926.1206,1097.4913 Q926.7768,1097.6475 927.3393,1097.9444 L927.3393,1100.6631 Q926.7143,1100.085 926.1206,1099.8194 Q925.5268,1099.5381 924.9018,1099.5381 Q923.5581,1099.5381 922.8706,1100.6163 Q922.1831,1101.6788 922.1831,1103.7725 Q922.1831,1105.8663 922.8706,1106.9444 Q923.5581,1108.0069 924.9018,1108.0069 Q925.5268,1108.0069 926.1206,1107.7413 Q926.7143,1107.46 927.3393,1106.8819 L927.3393,1109.6006 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="71.668" x="941.8706" y="1108.8067">t_bsn_unit</text><line style="stroke:#000000;stroke-width:1;" x1="845.02" x2="1082.8891" y1="1117.96" y2="1117.96"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="850.02" y="1134.9551">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="850.02" y="1151.252">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="850.02" y="1167.5489">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="850.02" y="1183.8457">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115.0557" x="850.02" y="1200.1426">parent_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125.877" x="850.02" y="1216.4395">is_active: boolean</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="227.8691" x="850.02" y="1232.7364">primary_bank_account_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="850.02" y="1249.0332">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="845.02" x2="1082.8891" y1="1256.335" y2="1256.335"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.041" x="850.02" y="1273.3301">name: varchar(255)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131.6123" x="850.02" y="1289.627">type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.1621" x="850.02" y="1305.9239">department: varchar(150)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="188.1113" x="850.02" y="1322.2207">integration_id: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="207.9492" x="850.02" y="1338.5176">processing_code: varchar(30)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161.8887" x="850.02" y="1354.8145">currency: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108.4043" x="850.02" y="1371.1114">kpp: varchar(9)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="135.2422" x="850.02" y="1387.4082">phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.9473" x="850.02" y="1403.7051">email: varchar(350)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="196.9365" x="850.02" y="1420.002">contract_prefix: varchar(11)</text></g><g id="elem_t_manager"><rect codeLine="39" fill="#FFFFFF" height="174.375" id="t_manager" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="213.5371" x="243.19" y="44.6"/><ellipse cx="308.5015" cy="58.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M311.4703,64.2406 Q310.8921,64.5375 310.2515,64.6781 Q309.6109,64.8344 308.9078,64.8344 Q306.4078,64.8344 305.0796,63.1937 Q303.7671,61.5375 303.7671,58.4125 Q303.7671,55.2875 305.0796,53.6312 Q306.4078,51.975 308.9078,51.975 Q309.6109,51.975 310.2515,52.1312 Q310.9078,52.2875 311.4703,52.5844 L311.4703,55.3031 Q310.8453,54.725 310.2515,54.4594 Q309.6578,54.1781 309.0328,54.1781 Q307.689,54.1781 307.0015,55.2562 Q306.314,56.3187 306.314,58.4125 Q306.314,60.5062 307.0015,61.5844 Q307.689,62.6469 309.0328,62.6469 Q309.6578,62.6469 310.2515,62.3812 Q310.8453,62.1 311.4703,61.5219 L311.4703,64.2406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="75.4141" x="326.0015" y="63.4467">t_manager</text><line style="stroke:#000000;stroke-width:1;" x1="244.19" x2="455.7271" y1="72.6" y2="72.6"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="249.19" y="89.5951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="249.19" y="105.892">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="249.19" y="122.1889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="249.19" y="138.4857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="249.19" y="154.7826">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="249.19" y="171.0795">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="249.19" y="187.3764">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="244.19" x2="455.7271" y1="194.6781" y2="194.6781"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="201.5371" x="249.19" y="211.6732">manager_type: varchar(100)</text></g><g id="elem_t_notif_rejection_empl"><rect codeLine="49" fill="#FFFFFF" height="174.375" id="t_notif_rejection_empl" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="213.8105" x="492.05" y="44.6"/><ellipse cx="519.0725" cy="58.6" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M522.0413,64.2406 Q521.4631,64.5375 520.8225,64.6781 Q520.1819,64.8344 519.4788,64.8344 Q516.9788,64.8344 515.6506,63.1937 Q514.3381,61.5375 514.3381,58.4125 Q514.3381,55.2875 515.6506,53.6312 Q516.9788,51.975 519.4788,51.975 Q520.1819,51.975 520.8225,52.1312 Q521.4788,52.2875 522.0413,52.5844 L522.0413,55.3031 Q521.4163,54.725 520.8225,54.4594 Q520.2288,54.1781 519.6038,54.1781 Q518.26,54.1781 517.5725,55.2562 Q516.885,56.3187 516.885,58.4125 Q516.885,60.5062 517.5725,61.5844 Q518.26,62.6469 519.6038,62.6469 Q520.2288,62.6469 520.8225,62.3812 Q521.4163,62.1 522.0413,61.5219 L522.0413,64.2406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="154.6494" x="534.1886" y="63.4467">t_notif_rejection_empl</text><line style="stroke:#000000;stroke-width:1;" x1="493.05" x2="704.8605" y1="72.6" y2="72.6"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="498.05" y="89.5951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="498.05" y="105.892">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="498.05" y="122.1889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="498.05" y="138.4857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="498.05" y="154.7826">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.0566" x="498.05" y="171.0795">template_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="498.05" y="187.3764">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="493.05" x2="704.8605" y1="194.6781" y2="194.6781"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="201.8105" x="498.05" y="211.6732">template_type: varchar(255)</text></g><g id="elem_t_position"><rect codeLine="59" fill="#FFFFFF" height="223.2656" id="t_position" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="190.1787" x="742.87" y="806.69"/><ellipse cx="800.2382" cy="820.69" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M803.2069,826.3306 Q802.6288,826.6275 801.9882,826.7681 Q801.3475,826.9244 800.6444,826.9244 Q798.1444,826.9244 796.8163,825.2837 Q795.5038,823.6275 795.5038,820.5025 Q795.5038,817.3775 796.8163,815.7212 Q798.1444,814.065 800.6444,814.065 Q801.3475,814.065 801.9882,814.2212 Q802.6444,814.3775 803.2069,814.6744 L803.2069,817.3931 Q802.5819,816.815 801.9882,816.5494 Q801.3944,816.2681 800.7694,816.2681 Q799.4257,816.2681 798.7382,817.3462 Q798.0507,818.4087 798.0507,820.5025 Q798.0507,822.5962 798.7382,823.6744 Q799.4257,824.7369 800.7694,824.7369 Q801.3944,824.7369 801.9882,824.4712 Q802.5819,824.19 803.2069,823.6119 L803.2069,826.3306 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="67.9424" x="817.7382" y="825.5367">t_position</text><line style="stroke:#000000;stroke-width:1;" x1="743.87" x2="932.0487" y1="834.69" y2="834.69"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="748.87" y="851.6851">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="748.87" y="867.982">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="748.87" y="884.2789">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="748.87" y="900.5757">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="115.0557" x="748.87" y="916.8726">parent_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="748.87" y="933.1695">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="161.1846" x="748.87" y="949.4664">primary_user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="748.87" y="965.7632">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="743.87" x2="932.0487" y1="973.065" y2="973.065"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="131.6123" x="748.87" y="990.0601">type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.041" x="748.87" y="1006.357">name: varchar(255)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="178.1787" x="748.87" y="1022.6539">description: varchar(255)</text></g><g id="elem_t_position_user"><rect codeLine="72" fill="#FFFFFF" height="190.6719" id="t_position_user" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="155.582" x="970.17" y="36.45"/><ellipse cx="993.1166" cy="50.45" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M996.0853,56.0906 Q995.5072,56.3875 994.8666,56.5281 Q994.226,56.6844 993.5228,56.6844 Q991.0228,56.6844 989.6947,55.0438 Q988.3822,53.3875 988.3822,50.2625 Q988.3822,47.1375 989.6947,45.4813 Q991.0228,43.825 993.5228,43.825 Q994.226,43.825 994.8666,43.9813 Q995.5228,44.1375 996.0853,44.4344 L996.0853,47.1531 Q995.4603,46.575 994.8666,46.3094 Q994.2728,46.0281 993.6478,46.0281 Q992.3041,46.0281 991.6166,47.1063 Q990.9291,48.1688 990.9291,50.2625 Q990.9291,52.3563 991.6166,53.4344 Q992.3041,54.4969 993.6478,54.4969 Q994.2728,54.4969 994.8666,54.2313 Q995.4603,53.95 996.0853,53.3719 L996.0853,56.0906 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="105.4785" x="1007.3269" y="55.2967">t_position_user</text><line style="stroke:#000000;stroke-width:1;" x1="971.17" x2="1124.752" y1="64.45" y2="64.45"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="976.17" y="81.4451">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="976.17" y="97.742">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="976.17" y="114.0389">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="976.17" y="130.3357">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="111.9111" x="976.17" y="146.6326">start_date: date</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="105.6768" x="976.17" y="162.9295">end_date: date</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="124.3115" x="976.17" y="179.2264">position_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="99.3945" x="976.17" y="195.5232">user_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="976.17" y="211.8201">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="971.17" x2="1124.752" y1="219.1219" y2="219.1219"/></g><g id="elem_t_replace"><rect codeLine="83" fill="#FFFFFF" height="239.5625" id="t_replace" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="195.0527" x="740.43" y="12"/><ellipse cx="801.9442" cy="26" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M804.9129,31.6406 Q804.3348,31.9375 803.6942,32.0781 Q803.0535,32.2344 802.3504,32.2344 Q799.8504,32.2344 798.5223,30.5938 Q797.2098,28.9375 797.2098,25.8125 Q797.2098,22.6875 798.5223,21.0313 Q799.8504,19.375 802.3504,19.375 Q803.0535,19.375 803.6942,19.5313 Q804.3504,19.6875 804.9129,19.9844 L804.9129,22.7031 Q804.2879,22.125 803.6942,21.8594 Q803.1004,21.5781 802.4754,21.5781 Q801.1317,21.5781 800.4442,22.6563 Q799.7567,23.7188 799.7567,25.8125 Q799.7567,27.9063 800.4442,28.9844 Q801.1317,30.0469 802.4754,30.0469 Q803.1004,30.0469 803.6942,29.7813 Q804.2879,29.5 804.9129,28.9219 L804.9129,31.6406 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="64.5244" x="819.4442" y="30.8467">t_replace</text><line style="stroke:#000000;stroke-width:1;" x1="741.43" x2="934.4827" y1="40" y2="40"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="746.43" y="56.9951">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="746.43" y="73.292">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="746.43" y="89.5889">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="746.43" y="105.8857">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176.5859" x="746.43" y="122.1826">user_substitute_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="167.3164" x="746.43" y="138.4795">user_replaced_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156.1396" x="746.43" y="154.7764">date_from: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="140.4102" x="746.43" y="171.0732">date_till: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="746.43" y="187.3701">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="741.43" x2="934.4827" y1="194.6719" y2="194.6719"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="148.0186" x="746.43" y="211.667">reason: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="183.0527" x="746.43" y="227.9639">comments: varchar(1000)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.3564" x="746.43" y="244.2607">status: varchar(100)</text></g><g id="elem_t_service_region_bsn_unit"><rect codeLine="97" fill="#FFFFFF" height="158.0781" id="t_service_region_bsn_unit" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="208.4004" x="985.76" y="839.28"/><ellipse cx="998.76" cy="853.28" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M1001.7288,858.9206 Q1001.1506,859.2175 1000.51,859.3581 Q999.8694,859.5144 999.1663,859.5144 Q996.6663,859.5144 995.3381,857.8738 Q994.0256,856.2175 994.0256,853.0925 Q994.0256,849.9675 995.3381,848.3113 Q996.6663,846.655 999.1663,846.655 Q999.8694,846.655 1000.51,846.8113 Q1001.1663,846.9675 1001.7288,847.2644 L1001.7288,849.9831 Q1001.1038,849.405 1000.51,849.1394 Q999.9163,848.8581 999.2913,848.8581 Q997.9475,848.8581 997.26,849.9363 Q996.5725,850.9988 996.5725,853.0925 Q996.5725,855.1863 997.26,856.2644 Q997.9475,857.3269 999.2913,857.3269 Q999.9163,857.3269 1000.51,857.0613 Q1001.1038,856.78 1001.7288,856.2019 L1001.7288,858.9206 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="180.4004" x="1010.76" y="858.1267">t_service_region_bsn_unit</text><line style="stroke:#000000;stroke-width:1;" x1="986.76" x2="1193.1604" y1="867.28" y2="867.28"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="991.76" y="884.2751">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="991.76" y="900.572">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="991.76" y="916.8689">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="991.76" y="933.1657">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="82.8447" x="991.76" y="949.4626">code: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="991.76" y="965.7595">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="991.76" y="982.0564">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="986.76" x2="1193.1604" y1="989.3581" y2="989.3581"/></g><g id="elem_t_timetable"><rect codeLine="106" fill="#FFFFFF" height="206.9688" id="t_timetable" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="247.6416" x="1229.14" y="814.84"/><ellipse cx="1309.4222" cy="828.84" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M1312.391,834.4806 Q1311.8129,834.7775 1311.1722,834.9181 Q1310.5316,835.0744 1309.8285,835.0744 Q1307.3285,835.0744 1306.0004,833.4337 Q1304.6879,831.7775 1304.6879,828.6525 Q1304.6879,825.5275 1306.0004,823.8712 Q1307.3285,822.215 1309.8285,822.215 Q1310.5316,822.215 1311.1722,822.3712 Q1311.8285,822.5275 1312.391,822.8244 L1312.391,825.5431 Q1311.766,824.965 1311.1722,824.6994 Q1310.5785,824.4181 1309.9535,824.4181 Q1308.6097,824.4181 1307.9222,825.4962 Q1307.2347,826.5587 1307.2347,828.6525 Q1307.2347,830.7462 1307.9222,831.8244 Q1308.6097,832.8869 1309.9535,832.8869 Q1310.5785,832.8869 1311.1722,832.6212 Q1311.766,832.34 1312.391,831.7619 L1312.391,834.4806 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="79.5771" x="1326.9222" y="833.6867">t_timetable</text><line style="stroke:#000000;stroke-width:1;" x1="1230.14" x2="1475.7816" y1="842.84" y2="842.84"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="1235.14" y="859.8351">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="1235.14" y="876.132">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="1235.14" y="892.4289">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="1235.14" y="908.7257">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="128.0371" x="1235.14" y="925.0226">bsn_unit_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="114.2832" x="1235.14" y="941.3195">start_work: time</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="108.0488" x="1235.14" y="957.6164">end_work: time</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="1235.14" y="973.9132">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="1230.14" x2="1475.7816" y1="981.215" y2="981.215"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="190.3672" x="1235.14" y="998.2101">day_of_week: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="235.6416" x="1235.14" y="1014.507">day_of_week_lower: varchar(100)</text></g><g id="elem_t_user"><rect codeLine="118" fill="#FFFFFF" height="435.125" id="t_user" rx="2.5" ry="2.5" style="stroke:#000000;stroke-width:1;" width="236.1504" x="719.88" y="311.57"/><ellipse cx="812.6925" cy="325.57" fill="#FFFFFF" rx="9" ry="9" style="stroke:#000000;stroke-width:1;"/><path d="M815.6613,331.2106 Q815.0831,331.5075 814.4425,331.6481 Q813.8019,331.8044 813.0988,331.8044 Q810.5988,331.8044 809.2706,330.1637 Q807.9581,328.5075 807.9581,325.3825 Q807.9581,322.2575 809.2706,320.6012 Q810.5988,318.945 813.0988,318.945 Q813.8019,318.945 814.4425,319.1012 Q815.0988,319.2575 815.6613,319.5544 L815.6613,322.2731 Q815.0363,321.695 814.4425,321.4294 Q813.8488,321.1481 813.2238,321.1481 Q811.88,321.1481 811.1925,322.2262 Q810.505,323.2887 810.505,325.3825 Q810.505,327.4762 811.1925,328.5544 Q811.88,329.6169 813.2238,329.6169 Q813.8488,329.6169 814.4425,329.3512 Q815.0363,329.07 815.6613,328.4919 L815.6613,331.2106 Z " fill="#000000"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="43.0254" x="830.1925" y="330.4167">t_user</text><line style="stroke:#000000;stroke-width:1;" x1="720.88" x2="955.0304" y1="339.57" y2="339.57"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.3184" x="725.88" y="356.5651">created: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="126.8887" x="725.88" y="372.862">created_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.582" x="725.88" y="389.1589">last_upd: timestamp</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="132.1523" x="725.88" y="405.4557">last_upd_by: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="186.1016" x="725.88" y="421.7526">primary_position_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="224.1504" x="725.88" y="438.0495">primary_responsibility_id: bigint</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="61.8584" x="725.88" y="454.3464">id: bigint</text><line style="stroke:#000000;stroke-width:1;" x1="720.88" x2="955.0304" y1="461.6481" y2="461.6481"/><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="165.4912" x="725.88" y="478.6432">first_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="163.3857" x="725.88" y="494.9401">last_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="185.9375" x="725.88" y="511.237">middle_name: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="198.8643" x="725.88" y="527.5339">first_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="196.7588" x="725.88" y="543.8307">last_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="219.3105" x="725.88" y="560.1276">middle_name_gen: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="156.0508" x="725.88" y="576.4245">job_title: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189.4238" x="725.88" y="592.7214">job_title_gen: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="170.9736" x="725.88" y="609.0182">document: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="125.5352" x="725.88" y="625.3151">login: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="188.1113" x="725.88" y="641.612">integration_id: varchar(50)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="207.7168" x="725.88" y="657.9089">employee_type: varchar(100)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="138.9473" x="725.88" y="674.2057">email: varchar(350)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="189.7246" x="725.88" y="690.5026">mobile_phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="176.1211" x="725.88" y="706.7995">work_phone: varchar(40)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="181.959" x="725.88" y="723.0964">keycloak_id: varchar(225)</text><text fill="#000000" font-family="Verdana" font-size="14" lengthAdjust="spacing" textLength="143.3564" x="725.88" y="739.3932">status: varchar(100)</text></g><g id="link_t_bsn_unit_t_bsn_unit"><path codeLine="145" d="M866.28,1089.75 C866.28,1077.77 866.28,1070.3 866.28,1070.3 C866.28,1070.3 793.45,1070.3 793.45,1070.3 C793.45,1070.3 793.45,1445.3 793.45,1445.3 C793.45,1445.3 963.96,1445.3 963.96,1445.3 C963.96,1445.3 963.96,1456.6 963.96,1445.74 " fill="#FFFFFF" fill-opacity="0.00000" id="t_bsn_unit-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="963.96,1427.74,957.96,1445.74,969.96,1445.74,963.96,1427.74" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="77.5049" x="710.45" y="1296.7669">parent_id:id</text></g><g id="link_t_manager_t_bsn_unit"><path codeLine="146" d="M314.37,219.32 C314.37,484.24 314.37,1259.3 314.37,1259.3 C314.37,1259.3 637.9,1259.3 825.68,1259.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_manager-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="843.68,1259.3,825.68,1253.3,825.68,1265.3,843.68,1259.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="224.37" y="1000.0269">bsn_unit_id:id</text></g><g id="link_t_manager_t_user"><path codeLine="147" d="M385.55,219.02 C385.55,336.04 385.55,529.3 385.55,529.3 C385.55,529.3 567.34,529.3 701.39,529.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_manager-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="719.39,529.3,701.39,523.3,701.39,535.3,719.39,529.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="334.33" y="525.3669">user_id:id</text></g><g id="link_t_notif_rejection_empl_t_user"><path codeLine="148" d="M706.09,132.3 C720.35,132.3 730.16,132.3 730.16,132.3 C730.16,132.3 730.16,200.95 730.16,293.27 " fill="#FFFFFF" fill-opacity="0.00000" id="t_notif_rejection_empl-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="730.16,311.27,736.16,293.27,724.16,293.27,730.16,311.27" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="683.16" y="222.8169">user_id:id</text></g><g id="link_t_position_t_bsn_unit"><path codeLine="149" d="M888.53,1030.22 C888.53,1049.3 888.53,1051.5 888.53,1071.67 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="888.53,1089.67,894.53,1071.67,882.53,1071.67,888.53,1089.67" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="798.53" y="1056.0169">bsn_unit_id:id</text></g><g id="link_t_position_t_position"><path codeLine="150" d="M885.5,806.52 C885.5,789.4 885.5,777.3 885.5,777.3 C885.5,777.3 944.54,777.3 944.54,777.3 C944.54,777.3 944.54,1050.3 944.54,1050.3 C944.54,1050.3 910.79,1050.3 910.79,1050.3 C910.79,1050.3 910.79,1060.31 910.79,1048.26 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="910.79,1030.26,904.79,1048.26,916.79,1048.26,910.79,1030.26" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="77.5049" x="906.04" y="914.6369">parent_id:id</text></g><g id="link_t_position_t_user"><path codeLine="151" d="M790.41,806.27 C790.41,787.52 790.41,785.52 790.41,765.16 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="790.41,747.16,784.41,765.16,796.41,765.16,790.41,747.16" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="120.3389" x="669.41" y="772.7869">primary_user_id:id</text></g><g id="link_t_user_t_position"><path codeLine="158" d="M837.96,747.05 C837.96,767.55 837.96,769.69 837.96,788.56 " fill="#FFFFFF" fill-opacity="0.00000" id="t_user-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="837.96,806.56,843.96,788.56,831.96,788.56,837.96,806.56" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="143.4761" x="693.96" y="789.8769">primary_position_id:id</text></g><g id="link_t_position_user_t_position"><path codeLine="152" d="M977.96,227.34 C977.96,414.5 977.96,811.3 977.96,811.3 C977.96,811.3 976.07,811.3 951.28,811.3 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position_user-to-t_position" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="933.28,811.3,951.28,817.3,951.28,805.3,933.28,811.3" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="86.0996" x="978.96" y="537.7269">position_id:id</text></g><g id="link_t_position_user_t_user"><path codeLine="153" d="M969.72,132.3 C955.86,132.3 945.76,132.3 945.76,132.3 C945.76,132.3 945.76,200.95 945.76,293.27 " fill="#FFFFFF" fill-opacity="0.00000" id="t_position_user-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="945.76,311.27,951.76,293.27,939.76,293.27,945.76,311.27" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="62.9624" x="898.76" y="222.8669">user_id:id</text></g><g id="link_t_replace_t_user"><path codeLine="154" d="M805.45,251.81 C805.45,270.77 805.45,272.87 805.45,293.25 " fill="#FFFFFF" fill-opacity="0.00000" id="t_replace-to-t_user" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="805.45,311.25,811.45,293.25,799.45,293.25,805.45,311.25" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="134.6401" x="670.45" y="277.5969">user_substitute_id:id</text></g><g id="link_t_replace_t_user"><path codeLine="155" d="M870.47,251.81 C870.47,270.77 870.47,272.87 870.47,293.25 " fill="#FFFFFF" fill-opacity="0.00000" id="t_replace-to-t_user-1" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="870.47,311.25,876.47,293.25,864.47,293.25,870.47,311.25" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="126.0327" x="743.47" y="294.5969">user_replaced_id:id</text></g><g id="link_t_service_region_bsn_unit_t_bsn_unit"><path codeLine="156" d="M1018.47,997.68 C1018.47,1025.37 1018.47,1039.6 1018.47,1071.77 " fill="#FFFFFF" fill-opacity="0.00000" id="t_service_region_bsn_unit-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="1018.47,1089.77,1024.47,1071.77,1012.47,1071.77,1018.47,1089.77" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="928.47" y="1056.7969">bsn_unit_id:id</text></g><g id="link_t_timetable_t_bsn_unit"><path codeLine="157" d="M1228.91,1010.3 C1145.67,1010.3 1051.18,1010.3 1051.18,1010.3 C1051.18,1010.3 1051.18,1027.59 1051.18,1071.56 " fill="#FFFFFF" fill-opacity="0.00000" id="t_timetable-to-t_bsn_unit" style="stroke:#595959;stroke-width:1;"/><polygon fill="#FFFFFF" fill-opacity="0.00000" points="1051.18,1089.56,1057.18,1071.56,1045.18,1071.56,1051.18,1089.56" style="stroke:#595959;stroke-width:1;"/><text fill="#000000" font-family="Verdana" font-size="13" lengthAdjust="spacing" textLength="89.5591" x="1010.42" y="1023.3669">bsn_unit_id:id</text></g></g></svg></div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.instant"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/puml.js"></script>
+      
+        <script src="https://unpkg.com/@panzoom/panzoom@4.5.1/dist/panzoom.min.js"></script>
+      
+        <script src="../../assets/mkdocs_puml/interaction.js"></script>
+      
+    
+  </body>
+</html>
